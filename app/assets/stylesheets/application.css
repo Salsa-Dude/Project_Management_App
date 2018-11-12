@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.headers {
+  float: right;
+  display: inline-block;
+}

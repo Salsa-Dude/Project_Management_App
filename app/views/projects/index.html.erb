@@ -1,1 +1,12 @@
-<h1>Heyyyy Beth</h1>
+<h1>Projects</h1>
+<ul>
+  <% @projects.each do |project| %>
+  <li>Name: <%= link_to project.name, project_path(project) %></li>
+  <ul>
+    <li>Status: <%= project.status %></li>
+    <li>Due Date: <%= project.due_date %></li><br>
+  </ul>
+  <% end %>
+</ul>
+
+<%= link_to "Logout", "/logout", method: "DELETE"%>
