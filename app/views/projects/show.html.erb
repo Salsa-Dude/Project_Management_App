@@ -1,0 +1,40 @@
+<div class="title">
+<h1><%=@project.name%></h1>
+</div><br>
+
+<div class="description">
+  <h2>Description:</h2>
+  <p><%= @project.description %></p>
+</div><br>
+
+<div class="headers">
+  <li>Status: <%=@project.status%></li>
+  <li>Due Date: <%=@project.due_date%></li>
+</div>
+
+<div class="tasks">
+  <ul>
+    <h2>Tasks:</h2>
+    <% @project.tasks.each do |task|%>
+    <li>Name: <%= link_to task.name, task_path(task) %></li>
+    <ul>
+      <li>Status: <%= task.status %></li>
+      <li>Due Date: <%= task.due_date %></li>
+    </ul>
+    <% end %>
+  </ul>
+</div><br>
+
+<div class="notes">
+  <ul>
+    <h3>Notes:</h3>
+    <% @project.notes.each do |note| %>
+    <li><%= note.content %></li>
+    <p>posted by: <%= note.user.name %></p>
+    <% end %>
+  </ul>
+</div>
+
+<div class="navigate">
+  <h2><%= link_to "Return to Projects List", projects_path %> </h2>
+</div>
