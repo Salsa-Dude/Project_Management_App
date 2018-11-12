@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <h1>Login</h1>
+    <%= form_tag '/login' do %>
+      <%= label :username, "Username" %>
+      <%= text_field_tag :username %>
+      <%= label :email, "Email" %>
+      <%= text_field_tag :email %>
+      <%= submit_tag 'Login' %>
+    <% end %>
+
+</head>
+<body>
+  
+</body>
+</html>
