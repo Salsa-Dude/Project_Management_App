@@ -43,6 +43,10 @@ text-decoration: none;
   background: #d9534f;
 }
 
+.space {
+  height: 80px
+}
+
 /************************************************* 
     NAVIGATION BAR
 ***************************************************/
@@ -122,8 +126,18 @@ text-decoration: none;
 ***************************************************/
 
 .main-heading {
-  margin: 0px auto;
+ 
 }
+
+.main-heading h1 {
+  text-align: center;
+}
+
+
+
+
+
+
 
 
 
