@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 
+  <div class="error"> <%= flash.notice %></div>
+
   <h1>Login</h1>
     <%= form_tag '/login' do %>
       <%= label :username, "Username" %>

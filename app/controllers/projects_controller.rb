@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   before_action :get_project, only: [:show, :edit, :update, :destroy]
 
   def index
+    @current_user = User.find_by(id: session[:user_id])
   end
 
  def new
