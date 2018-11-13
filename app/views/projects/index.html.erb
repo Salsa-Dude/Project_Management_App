@@ -1,4 +1,6 @@
 <h1>Projects</h1>
+
+<h2>Hello <%= @current_user %></h2>
 <ul>
   <% @projects.each do |project| %>
   <li>Name: <%= link_to project.name, project_path(project) %></li>
