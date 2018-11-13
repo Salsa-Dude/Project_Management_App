@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    
+
   end
 
   def new
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.save
     session[:user_id] = @user.id
-    redirect_to projects_path
+    redirect_to users_path
   end
 
 
