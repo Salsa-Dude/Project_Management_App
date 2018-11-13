@@ -10,11 +10,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-<<<<<<< HEAD
-    @user.save
-    session[:user_id] = @user.id
-    redirect_to users_path
-=======
     if @user.valid?
       @user.save
       session[:user_id] = @user.id
@@ -22,7 +17,6 @@ class UsersController < ApplicationController
     else 
       render :new
     end
->>>>>>> validation
   end
 
 
