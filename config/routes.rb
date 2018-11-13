@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :notes
   resources :projects
   resources :collaborators
-  resources :users
+  resources :users, only: [:index, :new, :create]
   root 'application#index'
   get '/login' => 'sessions#new'
   get '/signup' => 'users#new'

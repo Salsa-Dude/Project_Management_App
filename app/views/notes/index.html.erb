@@ -1,0 +1,24 @@
+<h1>Notes</h1>
+
+<h2>Hello <%=current_user.name %>! Here are your notes:</h2>
+<ul>
+<% if !@notes.empty? %>
+  <% names = []%>
+    <% @notes.each do |note| %>
+      <% if !names.include?(note.project.name)%>
+        <h3>For <%= note.project.name %>:</h3>
+        <% names << note.project.name %>
+      <% end %>
+        <ul>
+          <li><%=note.content%></li>
+          <ul>
+            <li><%= link_to "Edit Note", edit_note_path(note)%></li>
+          </ul>
+        </ul>
+    <% end %>
+  <% end %>
+</ul><br>
+
+<%= link_to "Add a Note", new_note_path %><br>
+
+<%= link_to "Return to Project Page", projects_path %>

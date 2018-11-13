@@ -15,6 +15,9 @@
 <div class="tasks">
   <ul>
     <h2>Tasks:</h2>
+    <%= link_to "Create Task", new_task_path %>
+    <br>
+    <br>
     <% @project.tasks.each do |task|%>
     <li>Name: <%= link_to task.name, task_path(task) %></li>
     <ul>
@@ -28,10 +31,13 @@
 <div class="notes">
   <ul>
     <h3>Notes:</h3>
-    <% @project.notes.each do |note| %>
-    <li><%= note.content %></li>
-    <p>posted by: <%= note.user.name %></p>
-    <% end %>
+    <%= link_to "Add a Note", new_note_path %>
+    <br></br>
+    <ul>
+      <% @project.notes.each do |note| %>
+      <li>"<%= note.content %>" ~ posted by: <%= note.user.name %> <%= link_to "Edit Note", edit_note_path(note)%></li><br>
+      <% end %>
+    </ul>
   </ul>
 </div>
 

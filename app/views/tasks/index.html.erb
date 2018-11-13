@@ -1,7 +1,23 @@
 <h1>Tasks</h1>
 
+<h2>Hello <%=current_user.name %>! Here are your tasks:</h2>
 <ul>
-  <% @tasks.each do |task| %>
-  <li><%=link_to task.name, task_path(task)%></li>
+  <% if !@tasks.empty? %>
+  <% names = []%>
+    <% @tasks.each do |task| %>
+      <% if !names.include?(task.project.name)%>
+        <h3>For <%= task.project.name %>:</h3>
+        <% names << task.project.name %>
+      <% end %>
+      <ul>
+        <li><%=link_to task.name, task_path(task)%></li>
+        <ul>
+          <li><%= link_to "Edit Task", edit_task_path(task)%></li>
+        </ul>
+      </ul>
+    <% end %>
   <% end %>
 </ul>
+
+
+<%= link_to "Return to Project Page", projects_path %>

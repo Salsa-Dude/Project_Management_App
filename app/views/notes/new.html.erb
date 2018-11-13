@@ -1,0 +1,9 @@
+<h1>Add Note to Project</h1>
+
+<%= form_for @note do |f|%>
+  <%=f.label :content%>
+  <%=f.text_area :content%>
+  <%=f.label :project%>
+  <%=f.collection_select :project_id, current_user.projects, :id, :name %>
+  <%=f.submit %>
+  <% end %>

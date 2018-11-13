@@ -13,3 +13,8 @@
   <li>Status: <%=@task.status%></li>
   <li>Due Date: <%=@task.due_date%></li>
 </div>
+<br>
+<li><%= link_to "Edit Task", edit_task_path(@task)%></li>
+
+<br>
+<%= link_to "Return to Project Page", project_path(@task.project) %>

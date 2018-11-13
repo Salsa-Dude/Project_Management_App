@@ -2,12 +2,11 @@ class ProjectsController < ApplicationController
   before_action :get_project, only: [:show, :edit, :update, :destroy]
 
   def index
-    @current_user = User.find_by(id: session[:user_id])
   end
 
-  def new
+ def new
     @project = Project.new
-  end
+ end
 
   def create
     @project = Project.new(project_params)
@@ -16,7 +15,7 @@ class ProjectsController < ApplicationController
       current_user.projects << @project
       redirect_to project_path(@project)
     else
-      render:new
+      render :new
     end
   end
 
