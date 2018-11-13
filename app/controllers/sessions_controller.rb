@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to projects_path
     else
-      flash.notice = "No user found with that name"
+      flash.notice = "No user found with that name/password combination"
       render :new
     end
   end

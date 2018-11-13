@@ -3,7 +3,6 @@ class ProjectsController < ApplicationController
   # before_action :current_user
   def index
     @current_user = User.find_by(id: session[:user_id])
-   
   end
    
  def new
@@ -17,7 +16,7 @@ class ProjectsController < ApplicationController
       current_user.projects << @project
       redirect_to project_path(@project)
     else
-      render:new
+      render :new
     end
   end
 

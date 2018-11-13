@@ -44,7 +44,11 @@ text-decoration: none;
 }
 
 .space {
-  height: 80px
+  height: 80px;
+}
+
+.space-small {
+  height: 50px;
 }
 
 /************************************************* 
@@ -125,12 +129,26 @@ text-decoration: none;
     Main-Header
 ***************************************************/
 
-.main-heading {
- 
-}
-
 .main-heading h1 {
   text-align: center;
+}
+
+/************************************************* 
+    Category
+***************************************************/
+
+.category {
+  text-align: center;
+}
+
+.category .box {
+  display: inline-block;
+  margin-right: 150px;
+}
+
+.category i {
+  font-size: 80px;
+  color: #d9534f;
 }
 
 

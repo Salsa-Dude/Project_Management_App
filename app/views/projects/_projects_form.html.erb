@@ -1,4 +1,9 @@
 <%= form_for @project do |f|%>
+  <% if @project.errors.any? %>
+    <% @project.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
   <%=f.label :name%>
   <%=f.text_field :name%>
   <%=f.label :description%>
@@ -8,6 +13,6 @@
     prompt: { day: 'Select day', month: 'Select month', year: 'Select year'},
     start_year: Date.today.year - 20, end_year: Date.today.year + 100}, {required: true}%>
   <%=f.label :status%>
-  <%=f.select :status, options_for_select(["Not Started", "In Progress", "Complete"]) %>
+  <%=f.select :status, options_for_select(["Not Started", "In Progress", "Complete"]), {prompt: 'Select Status'} %>
   <%=f.submit submit_text %>
-  <% end %>
+<% end %>
