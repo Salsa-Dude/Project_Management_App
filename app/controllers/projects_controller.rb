@@ -1,20 +1,20 @@
 class ProjectsController < ApplicationController
   before_action :get_project, only: [:show, :edit, :update, :destroy]
+  # before_action :current_user
   def index
     @current_user = User.find_by(id: session[:user_id])
    
   end
-    # @projects = @current_user.projects
- 
-
-  def new
+   
+ def new
     @project = Project.new
-  end
+ end
 
   def create
     @project = Project.new(project_params)
     if @project.valid?
       @project.save
+      current_user.projects << @project
       redirect_to project_path(@project)
     else
       render:new

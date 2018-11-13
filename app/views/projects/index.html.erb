@@ -1,15 +1,17 @@
 <h1>Projects</h1>
 
-<h2>Hello <%= @current_user %></h2>
+<h2>Hello <%= @current_user.name%></h2>
 <ul>
-  <% @projects.each do |project| %>
-  <li>Name: <%= link_to project.name, project_path(project) %></li>
-  <ul>
-    <li>Status: <%= project.status %></li>
-    <li>Due Date: <%= project.due_date %></li><br>
-    <li><%= link_to "Edit Project", edit_project_path(project)%></li>
-  </ul>
+  <% if !@current_user.projects.empty?%>
+    <% @current_user.projects.each do |project| %>
+    <li>Name: <%= link_to project.name, project_path(project) %></li>
+    <ul>
+      <li>Status: <%= project.status %></li>
+      <li>Due Date: <%= project.due_date %></li><br>
+      <li><%= link_to "Edit Project", edit_project_path(project)%></li>
+    </ul>
+    <% end %>
   <% end %>
-</ul>
+ </ul>
 
 <%= link_to "Logout", "/logout", method: "DELETE"%>
