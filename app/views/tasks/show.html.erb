@@ -11,7 +11,7 @@
 
 <div class="headers">
   <li>Status: <%=@task.status%></li>
-  <li>Due Date: <%=@task.due_date%></li>
+  <li>Due Date: <%=@task.due_date.strptime("%A, %B, %Y")%></li>
 </div>
 <br>
 <li><%= link_to "Edit Task", edit_project_task_path(@project.id, @task.id)%></li>
