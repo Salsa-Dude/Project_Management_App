@@ -1,31 +1,12 @@
 <h1>Edit Task</h1>
 
-<%= form_for @task do |f|%>
-  <%=f.label :name%>:
-  <%=f.text_field :name%><br>
-  <br>
-  <%=f.label :description%>:
-  <%=f.text_area :description%><br>
-    <br>
-  <%=f.label :due_date%>:
-  <%=f.date_select :due_date, {order: [:month, :day, :year],
-    prompt: { day: 'Select day', month: 'Select month', year: 'Select year'},
-    start_year: Date.today.year - 20, end_year: Date.today.year + 100}, {required: true}%><br>
-      <br>
-  <%=f.label :status%>:
-  <%=f.select :status, options_for_select(["Not Started", "In Progress", "Complete"]) %><br>
-    <br>
-  <%=f.label :project%>:
-  <%=f.collection_select :project_id, current_user.projects, :id, :name %><br>
-    <br>
-  <br>
-  <%=f.submit "Update Task" %>
-  <% end %>
+<%= render partial: "tasks_form", locals: {submit_text: "Update Task"}%>
 
   <%=form_tag @task, method: "DELETE" do %>
     <%=submit_tag "Delete this Task" %>
   <% end %>
-<br>
-<br>
-  <%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>
-   <%= link_to "Logout", "/logout", method: "DELETE"%>
+
+  <br>
+  <br>
+    <%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>
+     <%= link_to "Logout", "/logout", method: "DELETE"%>
