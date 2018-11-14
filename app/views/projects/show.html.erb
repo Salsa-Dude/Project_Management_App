@@ -13,10 +13,12 @@
 </div>
 
 <div class="collaborator">
-  <h3><%= link_to "Add Collaborator", new_collaborator_path%></h3>
+  <h3><%= link_to "Add Collaborator", "/collaborators/new/#{@project.id}" %></h3>
+
+
   <ul>
     <% @project.collaborators.each do |c| %>
-    <li> <%= link_to c.user.name, collaborator_path(c) %> 
+    <li> <%= link_to c.user.name, collaborator_path(c) %>
     <% end %>
   </ul>
 

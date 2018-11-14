@@ -1,13 +1,14 @@
 class CollaboratorsController < ApplicationController
 
   before_action :get_collaborator, only: [:show, :destroy]
+
   def new
     @collaborator = Collaborator.new
+    @project = Project.find(params[:id])
   end
 
   def create
-    @collaborator = Collaborator.new(user_id: params[:user_id], project_id: ?)
-    byebug
+    @collaborator = Collaborator.new(collab_params)
     if @collaborator.valid?
       @collaborator.save
       redirect_to project_path(@collaborator.project_id)
