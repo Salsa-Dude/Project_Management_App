@@ -12,10 +12,10 @@ Task.destroy_all
 Note.destroy_all
 Collaborator.destroy_all
 
-user1 = User.create(name: "Joseph", username: "jarias3", email: "joe@gmail.com")
-user2 = User.create(name: "Beth", username: "bw7", email: "beth@gmail.com")
-user3 = User.create(name: "Alex", username: "alex10", email: "alex@gmail.com")
-user4 = User.create(name: "Max", username: 'salsadude', email: "max@gmail.com")
+user1 = User.create(name: "Joseph", username: "jarias3", email: "joe@gmail.com", password: "joseph")
+user2 = User.create(name: "Beth", username: "bw7", email: "beth@gmail.com", password: "beth")
+user3 = User.create(name: "Alex", username: "alex10", email: "alex@gmail.com", password: "alex")
+user4 = User.create(name: "Max", username: 'salsadude', email: "max@gmail.com", password: "max")
 
 project1 = Project.create(name: "project_1", description: "My first project", due_date: DateTime.new(2009, 9, 1), status: "active")
 project2 = Project.create(name: "project_2", description: "My second project", due_date: DateTime.new(2012, 7, 17), status: "finish")
@@ -36,9 +36,3 @@ note1 = Note.create(content: "My first note", project_id: 2, user_id: 2)
 note2 = Note.create(content: "Hello world", project_id: 1, user_id: 3)
 note3 = Note.create(content: "Bye world", project_id: 1, user_id: 3)
 note4 = Note.create(content: "Catch me if you can", project_id: 3, user_id: 1)
-
-
-
-
-
-

@@ -1,0 +1,24 @@
+<h1><%=header%></h1>
+
+<h2>Hello <%=current_user.name %>! Here are your <%=model_pluralized%>:</h2>
+<ul>
+  <% if !model_pluralized.empty? %>
+  <% names = []%>
+    <% model_pluralized.each do |model| %>
+      <% if !names.include?(model.project.name)%>
+        <h3>For <%= model.project.name %>:</h3>
+        <% names << model.project.name %>
+      <% end %>
+      <ul>
+        <li><%=link_to model.name, show_path(model)%></li>
+        <ul>
+          <li><%= link_to submit_text, edit_path(model)%></li>
+        </ul>
+      </ul>
+    <% end %>
+  <% end %>
+</ul><br>
+
+<%= link_to create_text, new_model_path %><br>
+
+<%= link_to "Return to Project Page", projects_path %>

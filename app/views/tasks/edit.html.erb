@@ -25,6 +25,7 @@
   <%=form_tag @task, method: "DELETE" do %>
     <%=submit_tag "Delete this Task" %>
   <% end %>
-
-  <br>
-  <%= link_to "Return to Project Page", projects_path %>
+<br>
+<br>
+  <%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>
+   <%= link_to "Logout", "/logout", method: "DELETE"%>

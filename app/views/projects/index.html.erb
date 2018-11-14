@@ -1,28 +1,28 @@
-<h1>Projects</h1>
+<h1><%= current_user.name.capitalize%>'s Projects</h1>
 
-<h2>Hello <%= current_user.name%></h2>
 <ul>
-  <% if !current_user.projects.empty?%>
-    <% current_user.projects.each do |project| %>
-    <li>Name: <%= link_to project.name, project_path(project) %></li>
-    <ul>
-      <li>Status: <%= project.status %></li>
-      <li>Due Date: <%= project.due_date %></li>
-      <li><%= link_to "Edit Project", edit_project_path(project)%></li><br>
-    </ul>
-    <% end %>
-  <% end %>
-</ul><br>
-<ul>
-  <br>
- <%= link_to "See Tasks for All Projects", tasks_path%><br>
- <%= link_to "See Notes for All Projects", notes_path%><br>
- <%= link_to "Create New Project", new_project_path %>
- <br>
+  <h2>Current Projects:</h2>
+  <p><%= link_to "Create New Project", new_project_path %></p>
+
+  <ul>
+    <% if !current_user.projects.empty?%>
+      <% current_user.projects.each do |project| %>
+      <li>Project: <%= link_to project.name, project_path(project) %></li>
+      <ul>
+        <li>Status: <%= project.status %></li>
+        <li>Due Date: <%= project.due_date %></li>
+        <li><%= link_to "Edit Project", edit_project_path(project)%></li><br>
+      </ul>
+      <% end %>
+    <% end %><br>
+  </ul>
+
+<h3>Current Tasks:</h3>
+ <p><%= link_to "See Tasks for All Projects", tasks_path%></p><br>
+ <h3>Current Notes:</h3>
+ <p><%= link_to "See Notes for All Projects", notes_path%></p>
+
 </ul>
-
-
-<%= link_to "Logout", "/logout", method: "DELETE"%> 
-  
-  
-
+<br>
+<br>
+<%= link_to "Home", users_path%>    <%= link_to "Logout", "/logout", method: "DELETE"%> 

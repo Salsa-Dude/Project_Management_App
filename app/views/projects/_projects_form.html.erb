@@ -16,3 +16,8 @@
   <%=f.select :status, options_for_select(["Not Started", "In Progress", "Complete"]), {prompt: 'Select Status'} %>
   <%=f.submit submit_text %>
 <% end %>
+
+<br>
+<br>
+  <%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>
+   <%= link_to "Logout", "/logout", method: "DELETE"%>

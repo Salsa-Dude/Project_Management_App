@@ -1,9 +1,13 @@
-<h1>Welcome <%= current_user.name %> </h1>
+<h1>Hello <%= current_user.name.capitalize%>!</h1>
+<h2>Welcome to your Project Planner!</h2>
+<ul>
+  <h3>Today is: <%= Time.now.strftime("%A, %B %d, %Y") %></h3>
+  <h3>What would you like to work on?</h3>
+  <ul>
+    <h3><%=link_to "See Projects", projects_path %></h3>
+    <h4><%=link_to "See Tasks", tasks_path %></h4>
+    <h4><%=link_to "See Notes", notes_path %></h4>
+  </ul>
+</ul>
 
-<h2><%=link_to "User Projects", projects_path %></h2>
-
-<h3><%=link_to "User Tasks", tasks_path %></h3>
-
-<h3><%=link_to "User Notes", notes_path %></h3>
-<br>
 <%= link_to "Logout", "/logout", method: "DELETE"%>

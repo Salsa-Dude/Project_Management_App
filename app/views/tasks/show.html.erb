@@ -17,4 +17,5 @@
 <li><%= link_to "Edit Task", edit_task_path(@task)%></li>
 
 <br>
-<%= link_to "Return to Project Page", project_path(@task.project) %>
+<%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>   
+ <%= link_to "Logout", "/logout", method: "DELETE"%>
