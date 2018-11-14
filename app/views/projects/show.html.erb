@@ -12,26 +12,28 @@
   <li>Due Date: <%=@project.due_date%></li>
 </div>
 
-<div class="collaborator">
-  <h3><%= link_to "Add Collaborator", "/collaborators/new/#{@project.id}" %></h3>
-
-
+<div class="collaborators">
   <ul>
-    <% @project.collaborators.each do |c| %>
-    <li> <%= link_to c.user.name, collaborator_path(c) %>
-    <% end %>
+    <h2>Collaborators:</h2>
+    <%=link_to "Add Collaborator", new_project_collaborator_path(@project.id) %>
+    <ul>
+      <% @project.collaborators.each do |c| %>
+      <li>
+        <p><%= link_to c.user.name, project_collaborator_path(@project.id, c.id)%></p>
+      </li>
+        <% end %>
+    </ul>
   </ul>
-
 </div>
 
 <div class="tasks">
   <ul>
     <h2>Tasks:</h2>
-    <%= link_to "Create Task", new_task_path %>
+    <%= link_to "Create Task", new_project_task_path(@project.id) %>
     <br>
     <br>
     <% @project.tasks.each do |task|%>
-    <li>Name: <%= link_to task.name, task_path(task) %></li>
+    <li>Name: <%= link_to task.name, project_task_path(@project.id, task.id) %></li>
     <ul>
       <li>Status: <%= task.status %></li>
       <li>Due Date: <%= task.due_date %></li>
@@ -43,11 +45,12 @@
 <div class="notes">
   <ul>
     <h3>Notes:</h3>
-    <%= link_to "Add a Note", new_note_path %>
+    <%= link_to "Add a Note", new_project_note_path(@project.id) %>
     <br></br>
     <ul>
       <% @project.notes.each do |note| %>
-      <li>"<%= note.content %>" ~ posted by: <%= note.user.name %> <%= link_to "Edit Note", edit_note_path(note)%></li><br>
+      <li>"<%= note.content %>" ~ posted by: <%= note.user.name %>
+        <%= link_to "Edit Note", edit_project_note_path(@project.id, note.id)%></li><br>
       <% end %>
     </ul>
   </ul>

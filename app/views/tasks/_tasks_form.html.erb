@@ -1,21 +1,18 @@
-<%= form_for @task do |f|%>
+<%= form_for [@project, @task] do |f|%>
+  <% if @task.errors.any? %>
+   <% @task.errors.full_messages.each do |message| %>
+     <li><%= message %></li>
+   <% end %>
+  <% end %>
   <%=f.label :name%>:
-  <%=f.text_field :name%><br>
-  <br>
+  <%=f.text_field :name%>
   <%=f.label :description%>:
-  <%=f.text_area :description%><br>
-    <br>
+  <%=f.text_area :description%>
   <%=f.label :due_date%>:
-  <%=f.date_select :due_date, {order: [:month, :day, :year],
+  <%=f.date_select :due_date, {order: [:day, :month, :year],
     prompt: { day: 'Select day', month: 'Select month', year: 'Select year'},
-    start_year: Date.today.year - 20, end_year: Date.today.year + 100}, {required: true}%><br>
-      <br>
+    start_year: Date.today.year - 20, end_year: Date.today.year + 100}, {required: true}%>
   <%=f.label :status%>:
-  <%=f.select :status, options_for_select(["Not Started", "In Progress", "Complete"]) %><br>
-    <br>
-  <%=f.label :project%>:
-  <%=f.collection_select :project_id, current_user.projects, :id, :name %><br>
-    <br>
-  <br>
+  <%=f.select :status, options_for_select(["Not Started", "In Progress", "Complete"]) %>
   <%=f.submit submit_text %>
   <% end %>

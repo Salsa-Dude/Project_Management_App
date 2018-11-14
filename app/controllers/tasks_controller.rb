@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :get_task, only: [:show, :edit, :update, :destroy]
+  before_action :find_project
 
   def index
     @tasks = current_user.user_tasks.flatten
@@ -10,11 +11,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_params)
+    @task = Task.new(name: params[:task][:name],
+      description: params[:task][:description], due_date: params[:task][:"due_date(1i)"],
+      status: params[:task][:status], project_id: params[:project_id])
     if @task.valid?
       @task.save
       current_user.user_tasks << @task
-      redirect_to task_path(@task)
+      redirect_to project_task_path(@project.id, @task.id)
     else
       render :new
     end
@@ -27,8 +30,11 @@ class TasksController < ApplicationController
   end
 
   def update
-    if @task.update!(task_params)
-      redirect_to task_path(@task)
+    date = params[:task][:"due_date(3i)"]+"/"+params[:task][:"due_date(2i)"]+"/"+ params[:task][:"due_date(1i)"]
+    if @task.update!(name: params[:task][:name],
+      description: params[:task][:description], due_date: date,
+      status: params[:task][:status], project_id: params[:project_id])
+      redirect_to project_task_path(@project.id, @task.id)
     else
       render :edit
     end
@@ -36,12 +42,16 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to tasks_path
+    redirect_to project_tasks_path(@project.id)
   end
 
   private
     def get_task
       @task = Task.find(params[:id])
+    end
+
+    def find_project
+      @project = Project.find(params[:project_id])
     end
 
     def task_params

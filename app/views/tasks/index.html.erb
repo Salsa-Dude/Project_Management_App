@@ -9,16 +9,16 @@
         <% names << task.project.name %>
       <% end %>
         <ul>
-          <li><%=link_to task.name, task_path(task)%></li>
+          <li><%=link_to task.name, project_task_path(task.project.id, task.id)%></li>
         <ul>
-          <li><%= link_to "Edit Task", edit_task_path(task)%></li>
+          <li><%= link_to "Edit Task", edit_project_task_path(task.project.id, task.id)%></li>
         </ul>
       </ul>
     <% end %>
   <% end %>
 </ul><br>
 
-<%= link_to "Create New Task", new_task_path %><br>
+<%= link_to "Create New Task", new_project_task_path(@project.id) %><br>
 
 <br>
 <br>

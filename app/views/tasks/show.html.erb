@@ -14,8 +14,8 @@
   <li>Due Date: <%=@task.due_date%></li>
 </div>
 <br>
-<li><%= link_to "Edit Task", edit_task_path(@task)%></li>
+<li><%= link_to "Edit Task", edit_project_task_path(@project.id, @task.id)%></li>
 
 <br>
-<%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>   
+<%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>
  <%= link_to "Logout", "/logout", method: "DELETE"%>

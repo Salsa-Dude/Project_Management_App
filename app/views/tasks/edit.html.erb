@@ -2,7 +2,7 @@
 
 <%= render partial: "tasks_form", locals: {submit_text: "Update Task"}%>
 
-  <%=form_tag @task, method: "DELETE" do %>
+  <%=form_tag [@project, @task], method: "DELETE" do %>
     <%=submit_tag "Delete this Task" %>
   <% end %>
 

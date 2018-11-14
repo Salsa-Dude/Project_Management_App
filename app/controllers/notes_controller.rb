@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
 
   before_action :get_note, only: [:edit, :update, :destroy]
+  before_action :find_project
 
   def index
     @notes = current_user.user_notes.flatten
@@ -11,7 +12,7 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.new(note_params)
+    @note = Note.new(content: params[:note][:content], project_id: params[:project_id], user_id: current_user.id)
     current_user.notes << @note
     if @note.valid?
       @note.save
@@ -27,8 +28,9 @@ class NotesController < ApplicationController
   end
 
   def update
-    if @note.update!(note_params)
-      redirect_to project_path(@note.project)
+    if @note.update!(content: params[:note][:content],
+      project_id: params[:project_id], user_id: current_user.id)
+      redirect_to project_path(@project.id)
     else
       render :edit
     end
@@ -36,13 +38,17 @@ class NotesController < ApplicationController
 
   def destroy
     @note.destroy
-    redirect_to project_path(@note.project)
+    redirect_to project_path(@project.id)
   end
 
   private
 
     def get_note
       @note = Note.find(params[:id])
+    end
+
+    def find_project
+      @project = Project.find(params[:project_id])
     end
 
     def note_params

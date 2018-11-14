@@ -3,6 +3,6 @@
 <h3> <%= @collaborator.user.name %></h3>
 
 
-<%=form_tag @collaborator, method: "DELETE" do %>
+<%=form_tag [@project, @collaborator], method: "DELETE" do %>
   <%=submit_tag "Delete Collaborator" %>
 <% end %>
