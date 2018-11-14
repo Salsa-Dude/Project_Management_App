@@ -1,0 +1,7 @@
+<h1>Add Collaborator</h1>
+
+<%= form_for @collaborator do |f| %>
+  <%= f.label "Choose Collaborator" %>
+  <%= f.collection_select :user_id, User.all, :id, :name, prompt: true%>
+  <%= f.submit "Add Collaborator" %>
+  <% end %>

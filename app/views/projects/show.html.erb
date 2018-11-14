@@ -12,6 +12,16 @@
   <li>Due Date: <%=@project.due_date%></li>
 </div>
 
+<div class="collaborator">
+  <h3><%= link_to "Add Collaborator", new_collaborator_path%></h3>
+  <ul>
+    <% @project.collaborators.each do |c| %>
+    <li> <%= link_to c.user.name, collaborator_path(c) %> 
+    <% end %>
+  </ul>
+
+</div>
+
 <div class="tasks">
   <ul>
     <h2>Tasks:</h2>
