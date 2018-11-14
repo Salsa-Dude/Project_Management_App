@@ -6,14 +6,18 @@ class CollaboratorsController < ApplicationController
   end
 
   def create
-    @collaborator = Collaborator.new(user_id: params[:user_id], project_id: ?)
-    byebug
-    if @collaborator.valid?
-      @collaborator.save
-      redirect_to project_path(@collaborator.project_id)
-    else
-      render :new
-    end
+    user = User.find_by(email: params[:email])
+    if user 
+      @collaborator = Collaborator.new(user_id: user.id, project_id: params[:project_id])
+      if @collaborator.valid?
+        @collaborator.save
+        redirect_to project_path(@collaborator.project_id)
+      else
+        render :new
+      end
+    else  
+      redirect_to new_collaborator_path
+    end 
   end
 
   def show

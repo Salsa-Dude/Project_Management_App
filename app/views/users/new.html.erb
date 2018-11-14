@@ -6,23 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 
-  <h1>Sign Up</h1>
-    <%= form_for(@user) do |f| %>
-    <% if @user.errors.any? %>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+  <nav class="navigation-bar">
+    <a href="/" class="logo">WePlan</a>
+    <ul class="nav-links">
+        <li><a href="/login" class="nav-link">Login</a></li>
+        <li><a href="/" class="nav-link">Home</a></li>
+    </ul>
+  </nav>
+  <div class="error"> <%= flash.notice %></div>
+
+  <div class="login-header">
+   <h1>Sign Up</h1>
+  </div>
+  
+  <div class="space">
+  </div>
+
+  <div class="form-box">
+    <div class="form-inner">
+      <%= form_for(@user) do |f| %>
+      <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       <% end %>
-    <% end %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <%= f.label :email%>
-      <%= f.text_field :email%>
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-      <%= f.submit 'Login' %>
-    <% end %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :email%>
+        <%= f.text_field :email%>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <%= f.submit 'Sign Up' %>
+      <% end %>
+    </div>
+  </div>
 
 </head>
 <body>

@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :get_project, only: [:show, :edit, :update, :destroy]
+  before_action :get_project, only: [:show, :edit, :update, :destroy, :get_project_id]
 
   def index
     @current_user = User.find_by(id: session[:user_id])
@@ -37,6 +37,10 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     redirect_to projects_path
+  end
+
+  def get_project_id
+    @project.id
   end
 
   private
