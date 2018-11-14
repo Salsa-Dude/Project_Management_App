@@ -1,3 +1,138 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  /* max-width: 1400px; */
+  margin: 0px auto;
+
+}
+
+.btn {
+color: white;
+font-weight: 700;
+border: 0;
+margin-bottom: 10px;
+margin-right: 4px;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+border-radius: 4px;
+font-family: 'Montserrat', sans-serif;
+text-decoration: none;
+}
+
+.btn-large {
+  padding: 15px 25px 15px 25px;
+}
+
+.btn-hotpink {
+  background: #d9534f;
+}
+
+.space {
+  height: 80px;
+}
+
+.space-small {
+  height: 50px;
+}
+
+/*************************************************
+    NAVIGATION BAR
+***************************************************/
+
+.navigation-bar {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.navigation-bar ul {
+  display: block;
+  float: right;
+  width: 400px;
+  margin-right: 0px;
+
+}
+
+.navigation-bar ul li {
+  display: inline-block;
+  margin-right: 70px;
+ 
+}
+
+.navigation-bar ul li a {
+  text-decoration: none;
+}
+
+.nav-links .nav-link {
+  font-size: 18px;
+  // letter-spacing: 1px;
+}
+
+.logo {
+  display: inline-block;
+  color: #d9534f;
+  width: 70px;
+  font-weight: bold;
+  margin-left: 30px;
+  text-decoration: none;
+  margin-top: 20px;
+ 
+}
+
+/*********************************************   
+  LOGIN 
+*********************************************/
+
+.login-header {
+ height: 80px;
+ background-color: #7157b8;
+ border: solid 1px;
+ letter-spacing: 2px;
+}
+
+.login-header h1 {
+  margin-top: 10px;
+  margin-left: 10%;
+  color: white;
+  font-size: 38px;
+}
+
+.form-box {
+  border: solid 1px;
+  width: 500px;
+  height: 500px;
+  margin-left: 5%;
+}
+
+.form-inner {
+  padding: 30px 0px 0px 45px;
+  margin-top: 15px;
+}
+
+.form-inner input {
+  display: block;
+  margin-bottom: 35px;
+}
+
+.form-inner input[type="text"], .form-inner input[type="password"]  {
+  width: 280px;
+  padding-top: 8px;
+  margin-top: 10px;
+}
+
+.form-inner label {
+  font-size: 23px;
+}
+
+.form-inner input[type="submit"] {
+  color:white ;
+  background-color:#d9534f;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid;
+  width: 150px;
+}

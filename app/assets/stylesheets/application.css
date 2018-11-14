@@ -143,10 +143,14 @@ text-decoration: none;
 
 .category .box {
   display: inline-block;
-  margin-right: 150px;
+  margin-right: 180px;
 }
 
 .category i {
   font-size: 80px;
-  color: #d9534f;
+  color: #7157b8;
+}
+
+.box .box-phrase {
+  margin-top: 30px;
 }
