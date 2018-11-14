@@ -11,8 +11,9 @@ class TasksController < ApplicationController
   end
 
   def create
+    date = params[:task][:"due_date(3i)"]+"/"+params[:task][:"due_date(2i)"]+"/"+ params[:task][:"due_date(1i)"]
     @task = Task.new(name: params[:task][:name],
-      description: params[:task][:description], due_date: params[:task][:"due_date(1i)"],
+      description: params[:task][:description], due_date: date,
       status: params[:task][:status], project_id: params[:project_id])
     if @task.valid?
       @task.save
@@ -42,7 +43,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to project_tasks_path(@project.id)
+    redirect_to project_path(@project.id)
   end
 
   private

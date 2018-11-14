@@ -9,7 +9,7 @@
   <%=f.label :description%>:
   <%=f.text_area :description%>
   <%=f.label :due_date%>:
-  <%=f.date_select :due_date, {order: [:day, :month, :year],
+  <%=f.date_select :due_date, {order: [:month, :day, :year],
     prompt: { day: 'Select day', month: 'Select month', year: 'Select year'},
     start_year: Date.today.year - 20, end_year: Date.today.year + 100}, {required: true}%>
   <%=f.label :status%>:
