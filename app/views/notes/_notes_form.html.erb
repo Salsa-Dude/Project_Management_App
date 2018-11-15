@@ -1,5 +1,9 @@
-<%= form_for [@project, @note] do |f|%>
-  <%=f.label :content%>
-  <%=f.text_area :content%>
-  <%=f.submit submit_text%>
-  <% end %>
+<div class="form-box">
+  <div class="form-inner">
+    <%= form_for [@project, @note] do |f|%>
+      <%=f.label :content%>
+      <%=f.text_area :content%>
+      <%=f.submit submit_text%>
+      <% end %>
+  </div>
+</div>
