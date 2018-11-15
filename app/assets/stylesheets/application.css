@@ -16,41 +16,6 @@
 
  */
 
-body {
-  /* max-width: 1400px; */
-  margin: 0px auto;
-
-}
-
-.btn {
-color: white;
-font-weight: 700;
-border: 0;
-margin-bottom: 10px;
-margin-right: 4px;
-letter-spacing: 0.5px;
-text-transform: uppercase;
-border-radius: 4px;
-font-family: 'Montserrat', sans-serif;
-text-decoration: none;
-}
-
-.btn-large {
-  padding: 15px 25px 15px 25px;
-}
-
-.btn-hotpink {
-  background: #d9534f;
-}
-
-.space {
-  height: 80px;
-}
-
-.space-small {
-  height: 50px;
-}
-
 /*************************************************
     NAVIGATION BAR
 ***************************************************/
@@ -65,92 +30,47 @@ text-decoration: none;
 .navigation-bar ul {
   display: block;
   float: right;
-  width: 250px;
-  margin-right: 30px;
+  width: 400px;
+  margin-right: 0px;
 
 }
 
 .navigation-bar ul li {
   display: inline-block;
   margin-right: 70px;
+ 
 }
 
 .navigation-bar ul li a {
-  color: black;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
+}
+
+.nav-links .nav-link {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: black;
 }
 
 .logo {
   display: inline-block;
-  color: #d9534f;
+  color: #de5347;
   width: 70px;
-  font-size: 28px;
   font-weight: bold;
   margin-left: 30px;
   text-decoration: none;
   margin-top: 20px;
+  font-size: 30px;
 }
 
 /*************************************************
-    MAIN
+    SPACES
 ***************************************************/
 
-.main {
-  padding: 30px;
-  height: 500px;
-  background: linear-gradient( rgba(95, 93, 93, 0.5), rgba(95, 93, 93, 0.6) ), url(project-management.jpg) center 0/cover repeat-x;
+.space {
+  height: 80px;
 }
 
-
-.main .container {
-  width: 750px;
-  margin-left: 70px;
-  margin-top: 50px;
-  height: 400px;
-  padding-left: 15px;
-}
-
-.main h1 {
-  font-size: 60px;
-  line-height: 75px;
-  letter-spacing: 1.5px;
-  margin-top: 30px;
-  color: white;
-}
-
-#get-started {
-  margin-top: 30px;
-  margin-left: 30px;
-  display: inline-block;
-}
-
-/*************************************************
-    Main-Header
-***************************************************/
-
-.main-heading h1 {
-  text-align: center;
-}
-
-/*************************************************
-    Category
-***************************************************/
-
-.category {
-  text-align: center;
-}
-
-.category .box {
-  display: inline-block;
-  margin-right: 180px;
-}
-
-.category i {
-  font-size: 80px;
-  color: #7157b8;
-}
-
-.box .box-phrase {
-  margin-top: 30px;
+.space-small {
+  height: 50px;
 }

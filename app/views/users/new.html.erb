@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheets/signup/signup.scss">
   <title>Document</title>
+</head>
+
+<body class="sign-up">
 
   <nav class="navigation-bar">
     <a href="/" class="logo">WePlan</a>
@@ -15,36 +21,55 @@
   </nav>
   <div class="error"> <%= flash.notice %></div>
 
-  <div class="login-header">
+  <div class="signup-header">
    <h1>Sign Up</h1>
   </div>
   
   <div class="space">
   </div>
 
-  <div class="form-box">
-    <div class="form-inner">
-      <%= form_for(@user) do |f| %>
-      <% if @user.errors.any? %>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+  <div class="signup-box">
+    <div class="form-box">
+      <div class="form-inner">
+        <%= form_for(@user) do |f| %>
+        <% if @user.errors.any? %>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
         <% end %>
-      <% end %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-        <%= f.label :email%>
-        <%= f.text_field :email%>
-        <%= f.label :username %>
-        <%= f.text_field :username %>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-        <%= f.submit 'Sign Up' %>
-      <% end %>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+          <%= f.label :email%>
+          <%= f.text_field :email%>
+          <%= f.label :username %>
+          <%= f.text_field :username %>
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+          <%= f.submit 'Sign Up' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="signup-reasons-box">
+      <h2>Easy</h2>
+      <div class="signup-reasons-content">
+        <p><i class="fas fa-angle-double-right"></i><span>Get started in minutes. Import existing projects or use a pre-built template to get up and running.<span></p>
+      </div>
+      <h2>Collaborative</h2>
+      <div class="signup-reasons-content">
+        <p><i class="fas fa-angle-double-right"></i><span>Share your work in real-time. Access tasks, calendars, files, and discussions from any device, wherever you are.<span></p>
+      </div>
+      <h2>Flexible</h2>
+      <div class="signup-reasons-content">
+        <p><i class="fas fa-angle-double-right"></i><span>Manage projects of any size with interactive Gantt charts, resource management, automated workflows, file sharing, and more.<span></p>
+      </div>
+      <h2>Demonstration</h2>
+      <div class="signup-reasons-content">
+        <p><i class="fas fa-angle-double-right"></i><span>We’ll walk you through all the project management features that will help you use WePlan to its fullest potential.<span></p>
+      </div>
     </div>
   </div>
 
-</head>
-<body>
+
 
 </body>
 </html>

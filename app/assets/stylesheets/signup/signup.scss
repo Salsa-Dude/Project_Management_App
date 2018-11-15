@@ -1,0 +1,78 @@
+
+/*********************************************   
+  SIGNUP FORM
+*********************************************/
+
+.sign-up {
+  .signup-header {
+    height: 80px;
+    background-color: #673ab7;
+    border: solid 1px;
+    letter-spacing: 2px;
+    h1 {
+      margin-top: 10px;
+      margin-left: 10%;
+      color: white;
+      font-size: 38px;
+    }
+  }
+}
+
+.signup-box {
+  display: flex;
+  
+  .form-box {
+    border: solid 1px;
+    width: 500px;
+    height: 600px;
+    margin-left: 5%;
+    .form-inner {
+      padding: 30px 0px 0px 45px;
+      margin-top: 15px;
+      input {
+        display: block;
+        margin-bottom: 35px;
+      }
+      input[type="text"], input[type="password"]  {
+        width: 280px;
+        padding-top: 8px;
+        margin-top: 10px;
+      }
+      label {
+        font-size: 23px;
+      }
+      input[type="submit"] {
+        color:white ;
+        background-color:#de5347;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        border: 1px solid;
+        width: 150px;
+      }
+    }
+  }
+  .signup-reasons-box {
+    margin-left: 10%; 
+    max-width: 600px;
+    margin-top: -20px;
+    h2 {
+      margin-bottom: 10px;
+      font-size: 25px;
+      color: #666464;
+    }
+    .signup-reasons-content p {
+      font-size: 20px;
+      line-height: 1.4em;
+      color: #737373;
+      i {
+        margin-right: 20px;
+        margin-left: 20px;
+        font-size: 20px;
+        color: #f5bc1a;
+      }
+    
+    }
+  }
+}
+
+
