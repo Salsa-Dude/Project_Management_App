@@ -26,17 +26,22 @@
   <div class="space">
   </div>
   
-  <div class="form-box">
-    <div class="form-inner">
-      <%= form_tag '/login' do %>
-      <%= label_tag :username, "Username" %>
-      <%= text_field_tag :username %>
-      <%= label_tag :email, "Email" %>
-      <%= text_field_tag :email%>
-      <%= label_tag :password, "Password" %>
-      <%= password_field_tag :password %>
-      <%= submit_tag 'Login' %>
-  <% end %>
+  <div class="login-row">
+    <div class="form-box">
+      <div class="form-inner">
+        <%= form_tag '/login' do %>
+          <%= label_tag :username, "Username" %>
+          <%= text_field_tag :username %>
+          <%= label_tag :email, "Email" %>
+          <%= text_field_tag :email%>
+          <%= label_tag :password, "Password" %>
+          <%= password_field_tag :password %>
+          <%= submit_tag 'Login' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="login-image-box">
+      <img src="https://news.sap.com/africa/files/2018/06/project-management.jpg" alt="">
     </div>
   </div>
 

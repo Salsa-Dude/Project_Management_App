@@ -1,0 +1,143 @@
+
+@import "variables";
+
+* {
+  box-sizing: border-box
+}
+
+.dashboard-body {
+  font-family: 'Roboto', sans-serif;
+  background: $greyLight;
+}
+
+#sideMenu {
+  background: $purpleLight;
+  max-width: 280px;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+
+  nav {
+    padding-top: 100px;
+    a{
+      display: block;
+      color: $greyDark;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-weight: 300;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: $greenNeon;
+        border-left: 5px solid $greenNeon;
+        padding: 15px 30px 15px 25px;
+      }
+      .fas, .fal {
+        color: $greenNeon;
+        font-size: 1.4rem;
+        margin-right: 0.8rem;
+        display: inline-block;
+        width: 30px;
+        position: relative;
+        top: 2px;
+      }
+      &.active {
+        background: $purpleDark;
+        border-left: 5px solid $greenNeon;
+        padding: 15px 30px 15px 25px;
+      }
+    }
+  }
+}
+
+header {
+  margin-left: 280px;
+  padding: 20px;
+  background: white;
+
+  .search-area {
+    display: inline-block;
+    width: 50%;
+    
+    .fas {
+      color: $greyDark;
+    }
+
+    input[type="text"] {
+      background: #fff;
+      border: none;
+      font-size: 1.3rem;
+      color: $greenNeon;
+      padding: 10px;
+      font-weight: 100;
+      width: 50%;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .user-area {
+    display: inline-block;
+    float: right;
+
+    a {
+      color: #1b1b1b;
+      display: inline-block;
+      padding-right: 20px;
+      text-decoration: none;
+      vertical-align: top;
+      height: 30px;
+    }
+  }
+}
+
+
+
+
+
+// .dashboard-body {
+//   .sidebar {
+//     width: 60px;
+//     position: absolute;
+//     top: 60px;
+//     bottom: 0;
+//     background-color: #518ff5;
+//     border-right: 1px solid;
+//   }
+//   .navigation-bar {
+//     background-color: #518ff5;
+//     margin-top: 0px;
+//     height: 60px;
+//     border-bottom: 1px solid;
+//     .logo {
+//       padding-left: 30px;
+//       margin-top: 8px;
+//       font-weight: bold;
+//       color: #de5347;
+//     }
+//     ul {
+//       display: block;
+//       text-align: right;
+//     }
+//   }
+//   .main-content {
+//     margin-left: 60px; 
+//     .greeting-row {
+//       display: flex;
+//       justify-content: space-between;
+//       .greeting {
+//         margin-left: 10%;
+//         margin-top: 5%;
+//       }
+//       .time-box {
+//         margin-top: 5%;
+//         margin-right: 10%;
+//       }
+//     }
+//     .work-on-box {
+//       margin-left: 10%;
+
+//     }
+//   }
+// }
+

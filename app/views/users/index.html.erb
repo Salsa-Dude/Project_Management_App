@@ -5,28 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
-<body class="projects">
 
-  <nav class="navigation-bar">
-    <a href="/" class="logo">WePlan</a>
-    <ul class="nav-links">
-        <li><a href="/login" class="nav-link">Logout</a></li>
-        <li><a href="/" class="nav-link">Home</a></li>
-    </ul>
-  </nav>
+<body class="dashboard-body">
+  <section id="sideMenu">
+    <nav>
+      <a href="#" class="active"><i class="fas fa-home"></i>Item</a>
+      <a href="#"><i class="fas fa-sticky-note"></i>Item</a>
+      <a href="#"><i class="fas fa-calendar"></i>Item</a>
+    </nav>
+  </section>
   
-  <h1>Hello <%= current_user.name.capitalize%>!</h1>
-  <h2>Welcome to your Project Planner!</h2>
-  <ul>
-    <h3>Today is: <%= Time.now.strftime("%A, %B %d, %Y") %></h3>
-    <h3>What would you like to work on?</h3>
-    <ul>
-      <h3><%=link_to "See Projects", projects_path %></h3>
-    </ul>
-  </ul>
+  <header>
+    <div class="search-area">
+      <i class="fas fa-search"></i>
+    <input type="text" name="" value="">
+    </div>
+    <div class="user-area">
+      <a href="#">Logout</a>
+      <a href="#">Home</a>
+    </div>
+  </header>
 
-<%= link_to "Logout", "/logout", method: "DELETE"%>
 </body>
 </html>
 
