@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :notes
   end
   resources :users, only: [:index, :new, :create]
+  get '/projects/filter/:q' => 'projects#filter', as: 'project_filter'
   get '/login' => 'sessions#new'
   get '/signup' => 'users#new'
   post '/login' =>'sessions#create'

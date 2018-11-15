@@ -23,7 +23,7 @@
       <a href="/projects/new"><i class="fas fa-sticky-note"></i>Create a Project</a>
     </nav>
   </section>
-  
+
   <header>
     <div class="search-area">
       <i class="fas fa-search"></i>
@@ -49,28 +49,28 @@
 
   <div class="project-status-list">
     <div class="project-status-box not-started status-inner">
-    <h4 class="project-title">Not Started</h4>
+    <h4 class="project-title"><%=link_to "Not Started", project_filter_path("Not Started") %></h4>
       <div class="status-content">
-        <p>You have 3 Not started projects</p>
+        <p>You have <%=current_user.projects_not_started_count %> project(s) that have not been started.</p>
       </div>
     </div>
     <div class="project-status-box in-progress status-inner" >
-    <h4 class="project-title in-progress">In Progress</h4>
+    <h4 class="project-title in-progress"><%=link_to "In Progress", project_filter_path("In Progress") %></h4>
       <div class="status-content">
-        <p>You have 5 In progress projects</p>
+        <p>You have <%=current_user.projects_in_progress_count %> project(s) that are in progress.</p>
       </div>
     </div>
     <div class="project-status-box complete status-inner">
-     <h4 class="project-title">Completed</h4>
+     <h4 class="project-title"><%=link_to "Completed", project_filter_path("Completed") %></h4>
        <div class="status-content">
-        <p>You have 2 completed projects</p>
+        <p>You have <%=current_user.completed_projects_count %> completed project(s).</p>
       </div>
     </div>
   </div>
 
-  
 
-  
+
+
 
 
 
