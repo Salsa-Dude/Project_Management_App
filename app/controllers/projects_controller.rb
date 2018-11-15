@@ -2,7 +2,12 @@ class ProjectsController < ApplicationController
   before_action :get_project, only: [:show, :edit, :update, :destroy, :get_project_id]
 
   def index
-    @current_user = User.find_by(id: session[:user_id])
+    @projects = User.find_by(id: session[:user_id]).projects
+  end
+
+  def filter
+    @projects = Project.where(:status => params[:q])
+    render :index
   end
 
  def new

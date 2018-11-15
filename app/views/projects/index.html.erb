@@ -29,17 +29,22 @@
       <a href="/root">Home</a>
     </div>
   </header>
-  
+<<<<<<< HEAD
+
   <h1 class="project-heading"><%= current_user.capitalize_stuff%>'s Projects</h1>
 
+=======
 
-    
+  <h1><%= current_user.capitalize_stuff%>'s Projects</h1>
+>>>>>>> user-model
+
+
     <p><%= link_to "Create New Project", new_project_path %></p>
 
     <div class="user-project-list">
      <h2>Current Projects:</h2>
-      <% if !current_user.projects.empty?%>
-        <% current_user.projects.each do |project| %>
+     <% if !@projects.empty?%>
+       <% @projects.each do |project| %>
         <div class="project-box">
           <ul class="inner-project-box">
             <li><span>Project:</span> <%= link_to project.capitalize_stuff, project_path(project), :class => "purple-link" %></li>
@@ -53,10 +58,6 @@
     </div>
 
   <%= link_to "Home", users_path%>    <%= link_to "Logout", "/logout", method: "DELETE"%>
-  
+
 </body>
 </html>
-
-
-
-
