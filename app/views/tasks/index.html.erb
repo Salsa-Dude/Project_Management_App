@@ -1,15 +1,15 @@
-<h1>Hello <%=current_user.name.capitalize %>!</h1>
-<h2>These are all of your tasks:</h2>
+<h1>Hello <%=current_user.capitalize_stuff %>!</h1>
+<h2>These are all of your tasks for <%= @project.capitalize_stuff %>:</h2>
 <ul>
   <% if !@tasks.empty? %>
   <% names = []%>
     <% @tasks.each do |task| %>
       <% if !names.include?(task.project.name)%>
-        <h3>For <%= task.project.name %>:</h3>
+        <h3>For <%= task.project.capitalize_stuff %>:</h3>
         <% names << task.project.name %>
       <% end %>
         <ul>
-          <li><%=link_to task.name, project_task_path(task.project.id, task.id)%></li>
+          <li><%=link_to task.capitalize_stuff, project_task_path(task.project.id, task.id)%></li>
         <ul>
           <li><%= link_to "Edit Task", edit_project_task_path(task.project.id, task.id)%></li>
         </ul>

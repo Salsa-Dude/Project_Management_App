@@ -30,4 +30,8 @@ class User < ApplicationRecord
      user_projects.collect {|project| project.notes}
    end
 
+   def capitalize_stuff
+     self.name.split.map{|x| x.capitalize}.join(" ")
+   end
+
 end
