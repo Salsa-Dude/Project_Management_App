@@ -10,6 +10,17 @@
   <title>Welcome</title>
 </head>
 <body class="project-index-body">
+  <header>
+    <div class="search-area">
+      <i class="fas fa-search"></i>
+    <input type="text" name="" value="">
+    </div>
+    <div class="user-area">
+      <%= link_to "Logout", "/logout", method: "DELETE"%>
+      <a href="/root">Home</a>
+    </div>
+  </header>
+  
   <h1><%= current_user.capitalize_stuff%>'s Projects</h1>
 
   <ul>
