@@ -14,6 +14,18 @@ class User < ApplicationRecord
      self.projects
    end
 
+   def projects_not_started_count
+     user_projects.select {|p| p.status == "Not Started"}.count
+   end
+
+   def projects_in_progress_count
+     user_projects.select {|p| p.status == "In Progress"}.count
+   end
+
+   def completed_projects_count
+     user_projects.select {|p| p.status == "Complete"}.count
+   end
+
    def user_project_names
      user_projects.collect {|project| project.name}
    end

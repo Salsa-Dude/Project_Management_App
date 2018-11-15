@@ -2,8 +2,12 @@
 <h2>Welcome to your Project Planner!</h2>
 <ul>
   <h3>Today is: <%= Time.now.strftime("%A, %B %d, %Y") %></h3>
-  <h3>What would you like to work on?</h3>
+  <h3>What would you like to work on?</h3><br>
+  <h3>Projects</h3>
   <ul>
+    <h3>Not Started: <%= current_user.projects_not_started_count%> Projects</h3>
+    <h3>In Progress: <%= current_user.projects_in_progress_count%> Projects</h3>
+    <h3>Completed: <%= current_user.completed_projects_count%> Projects</h3>
     <h3><%=link_to "See Projects", projects_path %></h3>
   </ul>
 </ul>
