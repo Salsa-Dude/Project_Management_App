@@ -14,7 +14,7 @@
       <h2>WePlan</h2>
       <nav>
         <a href="/projects"><i class="fas fa-paperclip"></i></i>All Projects</a>
-        <a href="<%= project_path(@project.id)%>"><i class="fas fa-paperclip"></i></i>Return to <%=@roject.capitalize_stuff%></a>
+        <a href="<%= project_path(@project.id)%>"><i class="fas fa-paperclip"></i></i>Return to <%=@project.capitalize_stuff%></a>
         <a href="<%= edit_project_task_path(@project.id, @task.id)%>"><i class="fas fa-sticky-note"></i>Edit Task</a>
       </nav>
     </section>
@@ -36,7 +36,7 @@
               <h1><%=@task.capitalize_stuff%></h1>
           </div>
 
-      <div class="description">
+      <div class="project-box">
         <h2>Task Details:</h2>
         <p><%= @task.description %></p><br>
       </div>
