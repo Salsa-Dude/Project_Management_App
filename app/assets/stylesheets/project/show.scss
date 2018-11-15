@@ -54,6 +54,17 @@
     }
     .user-project {
       margin-left: 400px;
+      display: flex;
+      h1 {
+        color: $greyDark;
+      }
+      .description {
+        margin-top: 50px;
+        h2 {
+          color: $orange;
+        }
+      }
+      
     }
   }
 
