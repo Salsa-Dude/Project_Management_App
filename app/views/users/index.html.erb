@@ -15,28 +15,21 @@
         <li><a href="/" class="nav-link">Home</a></li>
     </ul>
   </nav>
-  
+
   <h1>Hello <%= current_user.name.capitalize%>!</h1>
   <h2>Welcome to your Project Planner!</h2>
   <ul>
     <h3>Today is: <%= Time.now.strftime("%A, %B %d, %Y") %></h3>
     <h3>What would you like to work on?</h3>
+
+    <h3>Projects</h3>
     <ul>
+      <h3>Not Started: <%= current_user.projects_not_started_count%> Projects</h3>
+      <h3>In Progress: <%= current_user.projects_in_progress_count%> Projects</h3>
+      <h3>Completed: <%= current_user.completed_projects_count%> Projects</h3>
       <h3><%=link_to "See Projects", projects_path %></h3>
-      <h4><%=link_to "See Tasks", tasks_path %></h4>
-      <h4><%=link_to "See Notes", notes_path %></h4>
-    </ul>
   </ul>
 
 <%= link_to "Logout", "/logout", method: "DELETE"%>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

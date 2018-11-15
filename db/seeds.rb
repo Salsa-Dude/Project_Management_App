@@ -17,20 +17,20 @@ user2 = User.create(name: "Beth", username: "bw7", email: "beth@gmail.com", pass
 user3 = User.create(name: "Alex", username: "alex10", email: "alex@gmail.com", password: "alex")
 user4 = User.create(name: "Max", username: 'salsadude', email: "max@gmail.com", password: "max")
 
-project1 = Project.create(name: "project_1", description: "My first project", due_date: DateTime.new(2009, 9, 1), status: "active")
-project2 = Project.create(name: "project_2", description: "My second project", due_date: DateTime.new(2012, 7, 17), status: "finish")
-project3 = Project.create(name: "project_3", description: "My third project", due_date: DateTime.new(2018, 5, 20), status: "active")
+project1 = Project.create(name: "project_1", description: "My first project", due_date: DateTime.new(2009, 9, 1), status: "In Progress")
+project2 = Project.create(name: "project_2", description: "My second project", due_date: DateTime.new(2012, 7, 17), status: "Complete")
+project3 = Project.create(name: "project_3", description: "My third project", due_date: DateTime.new(2018, 5, 20), status: "In Progress")
 
 Collaborator.create(user_id: 4, project_id: 3)
 Collaborator.create(user_id: 3, project_id: 1)
 Collaborator.create(user_id: 1, project_id: 3)
 Collaborator.create(user_id: 2, project_id: 2)
 
-task1 = Task.create(name: "write content", description: "My first task", due_date: DateTime.new(1994, 12, 25), status: "not_started", project_id: 3)
-task2 = Task.create(name: "add button", description: "task one", due_date: DateTime.new(1998, 3, 5), status: "not_started", project_id: 1)
-task3 = Task.create(name: "make slidebar", description: "number 1 task", due_date: DateTime.new(2050, 2, 26), status: "in_progress", project_id: 2)
-task4 = Task.create(name: "make navigation", description: "number 2 task", due_date: DateTime.new(1980, 8, 30), status: "in_progress", project_id: 2)
-task5 = Task.create(name: "post photos", description: "task two", due_date: DateTime.new(2000, 10, 15), status: "in_progress", project_id: 1)
+task1 = Task.create(name: "write content", description: "My first task", due_date: DateTime.new(1994, 12, 25), status: "Not Started", project_id: 3)
+task2 = Task.create(name: "add button", description: "task one", due_date: DateTime.new(1998, 3, 5), status: "Not Started", project_id: 1)
+task3 = Task.create(name: "make slidebar", description: "number 1 task", due_date: DateTime.new(2050, 2, 26), status: "In Progress", project_id: 2)
+task4 = Task.create(name: "make navigation", description: "number 2 task", due_date: DateTime.new(1980, 8, 30), status: "In Progress", project_id: 2)
+task5 = Task.create(name: "post photos", description: "task two", due_date: DateTime.new(2000, 10, 15), status: "In Progress", project_id: 1)
 
 note1 = Note.create(content: "My first note", project_id: 2, user_id: 2)
 note2 = Note.create(content: "Hello world", project_id: 1, user_id: 3)
