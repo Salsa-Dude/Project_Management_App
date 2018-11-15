@@ -11,31 +11,35 @@
 }
 
 #sideMenu {
-  background: $purpleLight;
+  background: #518ff5;
   max-width: 280px;
   width: 280px;
   position: absolute;
   top: 0;
   bottom: 0;
-
+  h2 {
+    text-align: center;
+    color: 	#f5bc1a;
+  }
 
   nav {
     padding-top: 100px;
     a{
       display: block;
-      color: $greyDark;
+      color: white;
       text-decoration: none;
-      padding: 15px 30px;
+      padding: 28px 30px;
       font-weight: 300;
+      font-size: 16px;
       transition: all 0.3s ease-in-out;
       &:hover {
-        background: $greenNeon;
-        border-left: 5px solid $greenNeon;
-        padding: 15px 30px 15px 25px;
+        // background: #27a768;
+        border-left: 5px solid #27a768;
+        // padding: 20px 30px 15px 25px;
       }
       .fas, .fal {
-        color: $greenNeon;
-        font-size: 1.4rem;
+        color: #f5bc1a;
+        font-size: 1.7rem;
         margin-right: 0.8rem;
         display: inline-block;
         width: 30px;
@@ -43,8 +47,8 @@
         top: 2px;
       }
       &.active {
-        background: $purpleDark;
-        border-left: 5px solid $greenNeon;
+        background: #184da3;
+        border-left: 5px solid #27a768;
         padding: 15px 30px 15px 25px;
       }
     }
@@ -68,7 +72,7 @@ header {
       background: #fff;
       border: none;
       font-size: 1.3rem;
-      color: $greenNeon;
+      color: #27a768;
       padding: 10px;
       font-weight: 100;
       width: 50%;
@@ -90,6 +94,96 @@ header {
     }
   }
 }
+
+#content-area {
+  margin-left: 280px;
+  padding: 15px;
+  .greeting-row {
+    display: flex;
+    justify-content: space-between;
+    .greeting {
+      margin-left: 10%;
+      margin-top: 5%;
+      color: rgb(88, 85, 85);
+      letter-spacing: 1px;
+    }
+    .time-box {
+      margin-top: 3%;
+      margin-right: 10%;
+      color: rgb(88, 85, 85);
+    }
+    h3 {
+      font-size: 18px;
+    }
+  }
+  .work-on-box {
+    margin-left: 10%;
+    color: rgb(88, 85, 85);
+  }
+}
+
+.project-status-list {
+  margin-left: 500px;
+  margin-top: 80px;
+  display: flex;
+  .not-started {
+    color: #de5347;
+    .status-content {
+      background-color: #de5347;
+    }
+  }
+  .in-progress {
+    color: #f5bc1a;
+    .status-content {
+      background-color: #f5bc1a;
+    }
+  }
+  .complete {
+    color: #27a768;
+    .status-content {
+      background-color: #27a768;
+    }
+  }
+  .project-status-box {
+    margin-right: 80px;
+  }
+  .status-inner {
+    width: 250px;
+    h4 {
+      font-size: 22px;
+      padding-bottom: 10px;
+      font-weight: bold;
+    }
+    .status-content {
+      border: solid;
+      height: 150px;
+      // background-color: white;
+      p {
+        color: white;
+        font-size: 19px;
+        text-align: center;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
