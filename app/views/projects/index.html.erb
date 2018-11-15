@@ -10,6 +10,15 @@
   <title>Welcome</title>
 </head>
 <body class="project-index-body">
+  <section id="sideMenu">
+    <h2>WePlan</h2>
+    <nav>
+      <a href="/users"><i class="fas fa-home"></i>Home</a>
+      <a href="/projects" class="active"><i class="fas fa-paperclip"></i></i>Projects</a>
+      <a href="/projects/new"><i class="fas fa-sticky-note"></i>Create a Project</a>
+    </nav>
+  </section>
+
   <header>
     <div class="search-area">
       <i class="fas fa-search"></i>
@@ -21,28 +30,28 @@
     </div>
   </header>
   
-  <h1><%= current_user.capitalize_stuff%>'s Projects</h1>
+  <h1 class="project-heading"><%= current_user.capitalize_stuff%>'s Projects</h1>
 
-  <ul>
-    <h2>Current Projects:</h2>
+
+    
     <p><%= link_to "Create New Project", new_project_path %></p>
 
-    <ul>
+    <div class="user-project-list">
+     <h2>Current Projects:</h2>
       <% if !current_user.projects.empty?%>
         <% current_user.projects.each do |project| %>
-        <li>Project: <%= link_to project.capitalize_stuff, project_path(project) %></li>
-        <ul>
-          <li>Status: <%= project.status %></li>
-          <li>Due Date: <%= project.format_due_date %></li>
-          <li><%= link_to "Edit Project", edit_project_path(project)%></li><br>
-        </ul>
+        <div class="project-box">
+          <ul class="inner-project-box">
+            <li><span>Project:</span> <%= link_to project.capitalize_stuff, project_path(project), :class => "purple-link" %></li>
+            <li><span>Status:</span> <%= project.status %></li>
+            <li><span>Due Date:</span> <%= project.format_due_date %></li>
+            <li><%= link_to "Edit Project", edit_project_path(project), :class => "purple-link" %></li><br>
+          </ul>
+        </div>
         <% end %>
       <% end %><br>
-    </ul>
+    </div>
 
-  </ul>
-  <br>
-  <br>
   <%= link_to "Home", users_path%>    <%= link_to "Logout", "/logout", method: "DELETE"%>
   
 </body>

@@ -1,0 +1,133 @@
+
+
+@import "variables";
+
+* {
+  box-sizing: border-box
+}
+
+.project-index-body {
+  font-family: 'Roboto', sans-serif;
+  background: $greyLight;
+}
+
+.project-index-body {
+  #sideMenu {
+    background: #518ff5;
+    max-width: 280px;
+    width: 280px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    h2 {
+      text-align: center;
+      color: 	#f5bc1a;
+    }
+  
+    nav {
+      padding-top: 100px;
+      a{
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 28px 30px;
+        font-weight: 300;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          // background: #27a768;
+          border-left: 5px solid #27a768;
+          // padding: 20px 30px 15px 25px;
+        }
+        .fas, .fal {
+          color: #f5bc1a;
+          font-size: 1.7rem;
+          margin-right: 0.8rem;
+          display: inline-block;
+          width: 30px;
+          position: relative;
+          top: 2px;
+        }
+        &.active {
+          background: #184da3;
+          border-left: 5px solid #27a768;
+          padding: 15px 30px 15px 25px;
+        }
+      }
+    }
+  }
+  header {
+    margin-left: 280px;
+    padding: 20px;
+    background: white;
+  
+    .search-area {
+      display: inline-block;
+      width: 50%;
+      
+      .fas {
+        color: $greyDark;
+      }
+  
+      input[type="text"] {
+        background: #fff;
+        border: none;
+        font-size: 1.3rem;
+        color: #27a768;
+        padding: 10px;
+        font-weight: 100;
+        width: 50%;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  
+    .user-area {
+      display: inline-block;
+      float: right;
+  
+      a {
+        color: #1b1b1b;
+        display: inline-block;
+        padding-right: 20px;
+        text-decoration: none;
+        vertical-align: top;
+        height: 30px;
+      }
+    }
+  }
+  .project-heading {
+    margin-left: 400px;
+    display: inline-block;
+    margin-top: 30px;
+    color: $greyDark;
+  }
+  .user-project-list {
+    margin-left: 400px;
+    h2 {
+      color: $orange;
+    }
+    .project-box {
+      display: inline-block;
+      .inner-project-box {
+        margin-top: 30px;
+        border: 1.5px solid;
+        padding: 40px 40px 40px 40px;
+        background-color: white;
+        li {
+          font-size: 17px;
+          line-height: 2em;
+          .purple-link {
+            color: #673ab7;
+          }
+          span {
+            font-size: 17px;
+            font-weight: bold;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

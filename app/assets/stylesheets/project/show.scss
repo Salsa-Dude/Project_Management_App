@@ -1,0 +1,60 @@
+
+@import "variables";
+
+  * {
+    box-sizing: border-box
+  }
+  
+  .show-project-page {
+    font-family: 'Roboto', sans-serif;
+    background: $greyLight;
+    #sideMenu {
+      background: #518ff5;
+      max-width: 280px;
+      width: 280px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      h2 {
+        text-align: center;
+        color: 	#f5bc1a;
+      }
+    
+      nav {
+        padding-top: 100px;
+        a{
+          display: block;
+          color: white;
+          text-decoration: none;
+          padding: 28px 30px;
+          font-weight: 300;
+          font-size: 16px;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            // background: #27a768;
+            border-left: 5px solid #27a768;
+            // padding: 20px 30px 15px 25px;
+          }
+          .fas, .fal {
+            color: #f5bc1a;
+            font-size: 1.7rem;
+            margin-right: 0.8rem;
+            display: inline-block;
+            width: 30px;
+            position: relative;
+            top: 2px;
+          }
+          &.active {
+            background: #184da3;
+            border-left: 5px solid #27a768;
+            padding: 15px 30px 15px 25px;
+          }
+        }
+      }
+    }
+    .user-project {
+      margin-left: 400px;
+    }
+  }
+
+  

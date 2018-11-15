@@ -1,7 +1,61 @@
-<div class="title">
-<h1><%=@project.capitalize_stuff %></h1>
-<li><%= link_to "Edit Project", edit_project_path(@project)%></li><br>
-</div><br>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <title>Project</title>
+</head>
+<body class="show-project-page">
+  <section id="sideMenu">
+    <h2>WePlan</h2>
+    <nav>
+      <a href="/users"><i class="fas fa-home"></i>Home</a>
+      <a href="/projects"><i class="fas fa-paperclip"></i></i>Projects</a>
+      <a href="/projects"><i class="fas fa-paperclip"></i></i>Edit Project</a>
+      <a href="/projects/new"><i class="fas fa-sticky-note"></i>Create Task</a>
+    </nav>
+  </section>
+
+  <header>
+    <div class="search-area">
+      <i class="fas fa-search"></i>
+    <input type="text" name="" value="">
+    </div>
+    <div class="user-area">
+      <%= link_to "Logout", "/logout", method: "DELETE"%>
+      <a href="/root">Home</a>
+    </div>
+  </header>
+
+  <div class="user-project">
+    <ul class="inner-project-box">
+      <div class="title">
+        <h1><%=@project.capitalize_stuff %></h1>
+        <li><%= link_to "Edit Project", edit_project_path(@project)%></li><br>
+      </div>
+    </ul>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="description">
   <h2>Description:</h2>
