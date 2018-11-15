@@ -1,21 +1,21 @@
 <div class="title">
-<h1><%=@task.name%> Details</h1>
+<h1><%=@task.capitalize_stuff%> Details</h1>
 </div><br>
 
 <div class="description">
   <h2>Description:</h2>
   <p><%= @task.description %></p><br>
   <h3>For project: </h3>
-  <p><%= link_to @task.project.name, project_path(@task.project) %></p>
+  <p><%= link_to @task.project.capitalize_stuff, project_path(@task.project) %></p>
 </div><br>
 
 <div class="headers">
   <li>Status: <%=@task.status%></li>
-  <li>Due Date: <%=@task.due_date%></li>
+  <li>Due Date: <%=@task.format_due_date%></li>
 </div>
 <br>
-<li><%= link_to "Edit Task", edit_task_path(@task)%></li>
+<li><%= link_to "Edit Task", edit_project_task_path(@project.id, @task.id)%></li>
 
 <br>
-<%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>   
+<%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>
  <%= link_to "Logout", "/logout", method: "DELETE"%>

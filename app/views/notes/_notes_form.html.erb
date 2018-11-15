@@ -1,7 +1,5 @@
-<%= form_for @note do |f|%>
+<%= form_for [@project, @note] do |f|%>
   <%=f.label :content%>
   <%=f.text_area :content%>
-  <%=f.label :project%>
-  <%=f.collection_select :project_id, current_user.projects, :id, :name%>
   <%=f.submit submit_text%>
   <% end %>

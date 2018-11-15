@@ -1,15 +1,13 @@
-<h1>Add Collaborator to <%= @project.name.capitalize%></h1>
+<h1>Add Collaborator</h1>
 
-<%= form_for @collaborator do |f| %>
+<%= form_for [@project, @collaborator] do |f| %>
    <% if @collaborator.errors.any? %>
     <% @collaborator.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   <% end %>
-  <label for="email">Email</label>
-  <input type="text" name="email">
-  <%= f.label :project %>
-  <%= f.collection_select :project_id, current_user.projects, :id, :name, prompt: true %>
+  <%= f.label "Project Collaborator" %>
+  <%= f.collection_select :user_id, User.all, :id, :name, prompt: true %>
   <%= f.submit "Add Collaborator" %>
 
 <% end %>

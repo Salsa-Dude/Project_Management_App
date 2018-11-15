@@ -11,14 +11,14 @@
         <ul>
           <li>"<%=note.content%>"</li>
           <ul>
-            <li><%= link_to "Edit Note", edit_note_path(note)%></li>
+            <li><%= link_to "Edit Note", edit_project_note_path(@project.id, note.id)%></li>
           </ul>
         </ul>
     <% end %>
   <% end %>
 </ul><br>
 
-<%= link_to "Add a Note", new_note_path %><br>
+<%= link_to "Add a Note", new_project_note_path(@project.id) %><br>
 
 <br>
 <br>
