@@ -1,53 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <title>Task</title>
-</head>
+<div class="title">
+<h1><%=@task.capitalize_stuff%> Details</h1>
+</div><br>
 
-<body class="show-project-page">
-    <section id="sideMenu">
-      <h2>WePlan</h2>
-      <nav>
-        <a href="/projects"><i class="fas fa-paperclip"></i></i>All Projects</a>
-        <a href="<%= project_path(@project.id)%>"><i class="fas fa-paperclip"></i></i>Return to <%=@project.capitalize_stuff%></a>
-        <a href="<%= edit_project_task_path(@project.id, @task.id)%>"><i class="fas fa-sticky-note"></i>Edit Task</a>
-      </nav>
-    </section>
+<div class="description">
+  <h2>Description:</h2>
+  <p><%= @task.description %></p><br>
+  <h3>For project: </h3>
+  <p><%= link_to @task.project.capitalize_stuff, project_path(@task.project) %></p>
+</div><br>
 
-    <header>
-      <div class="search-area">
-        <i class="fas fa-search"></i>
-      <input type="text" name="" value="">
-      </div>
-      <div class="user-area">
-        <%= link_to "Logout", "/logout", method: "DELETE"%>
-        <a href="/root">Home</a>
-      </div>
-    </header>
+<div class="headers">
+  <li>Status: <%=@task.status%></li>
+  <li>Due Date: <%=@task.format_due_date%></li>
+</div>
+<br>
+<li><%= link_to "Edit Task", edit_project_task_path(@project.id, @task.id)%></li>
 
-    <div class="user-project">
-      <ul class="inner-project-box">
-          <div class="title">
-              <h1><%=@task.capitalize_stuff%></h1>
-          </div>
-
-      <div class="project-box">
-        <h2>Task Details:</h2>
-        <p><%= @task.description %></p><br>
-      </div>
-
-      <div class="headers">
-        <li>Status: <%=@task.status%></li>
-        <li>Due Date: <%=@task.format_due_date%></li>
-      </div>
-
-    </ul>
-  </div>
-</body>
-
-</html>
+<br>
+<%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>
+ <%= link_to "Logout", "/logout", method: "DELETE"%>
