@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def filter
-    @projects = Project.where(:status => params[:q])
+    @projects = Project.where(:status => params[:q]).select {|p| p.users.include?(current_user)}
     render :index
   end
 
