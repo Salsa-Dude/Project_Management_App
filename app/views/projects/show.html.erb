@@ -68,7 +68,7 @@
       <ul class="inner-task">
         <% @project.tasks.each do |task|%>
        
-          <li><%= link_to task.capitalize_stuff, project_task_path(@project.id, task.id), :class => "purple-link"%><a href="<%= edit_project_task_path(@project.id)%>"></i>(Edit Task)</a></li>
+          <li><%= link_to task.capitalize_stuff, project_task_path(@project.id, task.id), :class => "purple-link"%><a href="<%= edit_project_task_path(@project.id)%>"></i><span>(Edit Task)</span></a></li>
           
           <ul>
           <li>Status: <%= task.status %></li>
@@ -87,13 +87,6 @@
       </ul>
     </div>
   </div>
-
- 
-
-  
-
-  
-
 </body>
 </html>
 
@@ -108,63 +101,4 @@
 
 
 
-      <div class="description">
-        <h2>Description:</h2>
-        <p><%= @project.description %></p>
-      </div><br>
-
-      <div class="headers">
-        <li>Status: <%=@project.status%></li>
-        <li>Due Date: <%=@project.format_due_date%></li>
-      </div>
-
-      <div class="collaborators">
-        <ul>
-          <h2>Collaborators:</h2>
-          <%=link_to "Add Collaborator", new_project_collaborator_path(@project.id) %>
-          <ul>
-            <% @project.collaborators.each do |c| %>
-            <% if c.user != current_user%>
-            <li>
-              <p><%= link_to c.user.capitalize_stuff, project_collaborator_path(@project.id, c.id)%></p>
-              <% end %>
-            </li>
-              <% end %>
-          </ul>
-        </ul>
-      </div>
-
-      <div class="tasks">
-        <ul>
-          <h2>Tasks:</h2>
-          <ul>
-            <% @project.tasks.each do |task|%>
-            <li><%= link_to task.capitalize_stuff, project_task_path(@project.id, task.id) %></li>
-            <ul>
-              <li>Status: <%= task.status %></li>
-              <li>Due Date: <%= task.format_due_date %></li>
-            </ul>
-            <% end %>
-          </ul>
-        </ul>
-      </div>
-
-    </ul>
-  </div>
-
-  <div class="notes">
-    <ul>
-      <h3>Notes:</h3>
-      <%= link_to "Add a Note", new_project_note_path(@project.id) %>
-      <br>
-      <ul>
-        <% @project.notes.each do |note| %>
-        <li>"<%= note.content %>" ~ posted by: <%= note.user.capitalize_stuff %><br>
-          <%= link_to "Edit Note", edit_project_note_path(@project.id, note.id)%></li><br>
-        <% end %>
-      </ul>
-    </ul>
-  </div>
-
-</body>
-</html>
+      

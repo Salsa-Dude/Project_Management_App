@@ -134,6 +134,9 @@
           margin-right: 20px;
           font-family: 'Lato', sans-serif; 
           font-size: 18px;
+          span {
+            color: $purple;
+          }
           a {
             margin-right: 10px;
             text-decoration: none;
