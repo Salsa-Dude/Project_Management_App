@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,7 @@
     <h2>WePlan</h2>
     <nav>
       <a href="/users"><i class="fas fa-home"></i>Home</a>
-      <a href="/projects" class="active"><i class="fas fa-paperclip"></i></i>Projects</a>
+      <a href="/projects" class="active"><i class="fas fa-paperclip"></i> All Projects</a>
       <a href="/projects/new"><i class="fas fa-sticky-note"></i>Create a Project</a>
     </nav>
   </section>
@@ -32,7 +31,10 @@
   </header>
 
   <h1 class="project-heading"><%= current_user.capitalize_stuff%>'s Projects</h1>
-  <p><%= link_to "Create New Project", new_project_path %></p>
+
+  <h1><%= current_user.capitalize_stuff%>'s Projects</h1>
+
+    <p><%= link_to "Create New Project", new_project_path %></p>
 
     <div class="user-project-list">
      <h2>Current Projects:</h2>
@@ -49,8 +51,6 @@
         <% end %>
       <% end %><br>
     </div>
-
-  <%= link_to "Home", users_path%>    <%= link_to "Logout", "/logout", method: "DELETE"%>
 
 </body>
 </html>
