@@ -29,7 +29,7 @@
   </header>
 
    <div class="form-box">
-    <h1>Create Note</h1>
+    <h1><%= title_text %></h1>
     <div class="form-inner">
       <%= form_for [@project, @note] do |f|%>
         <%=f.label :content%>

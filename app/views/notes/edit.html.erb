@@ -1,9 +1,6 @@
-<h1>Edit a Note</h1>
-
-<%= render partial: "notes_form", locals: {submit_text: "Update"}%>
+<%= render partial: "notes_form", locals: { title_text: "Update Note", submit_text: "Update"}%>
 <br>
   <%=form_tag [@project, @note], method: "DELETE" do %>
     <%=submit_tag "Delete Note" %>
   <% end %>
 
-<%= link_to "Home", users_path%>     <%= link_to "Return to Project Page", projects_path %>

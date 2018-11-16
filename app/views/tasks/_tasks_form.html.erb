@@ -31,7 +31,7 @@
 
   
 <div class="form-box">
-<h1>Create Task</h1>
+<h1><%= title_text %></h1>
   <div class="form-inner">
     <%= form_for [@project, @task] do |f|%>
       <% if @task.errors.any? %>
