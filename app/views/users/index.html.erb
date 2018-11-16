@@ -7,6 +7,7 @@
   <title>Projects</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Lato:400,700|Montserrat:400,700|Roboto:400,700" rel="stylesheet">
   
 </head>
 
@@ -35,7 +36,7 @@
     <div class="greeting-row">
        <div class="greeting">
         <h1>Hello <%= current_user.name.capitalize%>!</h1>
-        <h2>Welcome to your Project Planner!</h2>
+        <h2>Welcome to your Project Planner</h2>
       </div>
       <div class="time-box">
         <h3><%= Time.now.strftime("%A, %B %d, %Y") %></h3>

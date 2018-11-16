@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <%# <link rel="stylesheet" href="../stylesheets/login/login.css"> %>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Lato:400,700|Montserrat:400,700|Roboto:400,700" rel="stylesheet">
   <title>Login</title>
 </head>
 <body class="login-body">
@@ -22,26 +22,29 @@
   <div class="login-header">
    <h1>Login</h1>
   </div>
+
+  <div class="grey-bg">
   
-  <div class="space">
-  </div>
-  
-  <div class="login-row">
-    <div class="form-box">
-      <div class="form-inner">
-        <%= form_tag '/login' do %>
-          <%= label_tag :username, "Username" %>
-          <%= text_field_tag :username %>
-          <%= label_tag :email, "Email" %>
-          <%= text_field_tag :email%>
-          <%= label_tag :password, "Password" %>
-          <%= password_field_tag :password %>
-          <%= submit_tag 'Login' %>
-        <% end %>
-      </div>
+    <div class="space">
     </div>
-    <div class="login-image-box">
-      <img src="https://news.sap.com/africa/files/2018/06/project-management.jpg" alt="">
+    
+    <div class="login-row">
+      <div class="form-box">
+        <div class="form-inner">
+          <%= form_tag '/login' do %>
+            <%= label_tag :username, "Username" %>
+            <%= text_field_tag :username %>
+            <%= label_tag :email, "Email" %>
+            <%= text_field_tag :email%>
+            <%= label_tag :password, "Password" %>
+            <%= password_field_tag :password %>
+            <%= submit_tag 'Login' %>
+          <% end %>
+        </div>
+      </div>
+      <div class="login-image-box">
+        <img src="https://news.sap.com/africa/files/2018/06/project-management.jpg" alt="">
+      </div>
     </div>
   </div>
 

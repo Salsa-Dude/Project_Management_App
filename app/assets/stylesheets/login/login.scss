@@ -10,19 +10,26 @@
       margin-left: 10%;
       color: white;
       font-size: 35px;
+      font-family: 'Roboto', sans-serif;
     }
   }
   .form-box {
     border: solid 1px;
+    background: white;
     width: 500px;
     height: 500px;
     margin-left: 5%;
+    -webkit-box-shadow: 10px 10px 29px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 29px -8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 29px -8px rgba(0,0,0,0.75);
     .form-inner {
       padding: 30px 0px 0px 45px;
       margin-top: 15px;
       input {
         display: block;
         margin-bottom: 35px;
+        border: 1px solid darkgray;
+        border-radius: 5px;
       }
       input[type="text"], input[type="password"]  {
         width: 280px;
@@ -36,17 +43,20 @@
         padding: 10px 20px 10px 20px;
         border: 1px solid;
         width: 150px;
+        font-family: 'Montserrat', sans-serif;
       }
       label {
         font-size: 20px;
+        font-family: 'Lato', sans-serif;
       }
     }
   }
   .login-row {
     display: flex;
     justify-content: space-between;
+    max-width: 1600px;
     .login-image-box {
-      margin-right: 15%;
+      margin-right: 10%;
       padding-top: 40px;
       img {
         width: 600px;

@@ -8,7 +8,7 @@
 
 .project-index-body {
   font-family: 'Roboto', sans-serif;
-  background: $greyLight;
+  background: $grey;
 }
 
 .project-index-body {
@@ -22,8 +22,9 @@
     h2 {
       text-align: center;
       color: 	#f5bc1a;
+      font-size: 28px;
+      letter-spacing: 1px;
     }
-  
     nav {
       padding-top: 100px;
       a{
@@ -87,8 +88,9 @@
   
       a {
         color: #1b1b1b;
+        font-weight: bold;
         display: inline-block;
-        padding-right: 20px;
+        padding-right: 40px;
         text-decoration: none;
         vertical-align: top;
         height: 30px;
@@ -99,7 +101,7 @@
     margin-left: 400px;
     display: inline-block;
     margin-top: 30px;
-    color: $greyDark;
+    color: #1b1b1b;
   }
   .user-project-list {
     margin-left: 400px;
@@ -111,8 +113,9 @@
       .inner-project-box {
         margin-top: 30px;
         border: 1.5px solid;
-        padding: 40px 40px 40px 40px;
+        padding: 25px 25px 25px 25px;
         background-color: white;
+        margin-right: 20px;
         li {
           font-size: 17px;
           line-height: 2em;

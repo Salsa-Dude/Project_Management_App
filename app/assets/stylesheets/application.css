@@ -43,15 +43,18 @@
 
 .navigation-bar ul li a {
   text-decoration: none;
-  font-size: 18px;
-  color: black;
+  font-size: 17px;
   letter-spacing: 1px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 .nav-links .nav-link {
   font-size: 18px;
   letter-spacing: 1px;
   color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 .logo {
@@ -63,6 +66,7 @@
   text-decoration: none;
   margin-top: 20px;
   font-size: 30px;
+  font-family: 'Fredoka One', cursive;
 }
 
 /*************************************************

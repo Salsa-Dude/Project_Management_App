@@ -6,36 +6,40 @@
 }
 
 .dashboard-body {
-  font-family: 'Roboto', sans-serif;
-  background: $greyLight;
+  background: $grey;
 }
 
 #sideMenu {
   background: #518ff5;
-  max-width: 280px;
-  width: 280px;
+  max-width: 250px;
+  width: 250px;
   position: absolute;
   top: 0;
   bottom: 0;
+  border-right: 1px solid;
   h2 {
     text-align: center;
     color: 	#f5bc1a;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Fredoka One', cursive;
   }
 
   nav {
-    padding-top: 100px;
+    padding-top: 80px;
     a{
       display: block;
       color: white;
+      font-family: 'Montserrat', sans-serif;
       text-decoration: none;
       padding: 28px 30px;
       font-weight: 300;
       font-size: 16px;
       transition: all 0.3s ease-in-out;
+  
       &:hover {
-        // background: #27a768;
-        border-left: 5px solid #27a768;
-        // padding: 20px 30px 15px 25px;
+        background: #497ddf;
+        // border-left: 5px solid #27a768;
       }
       .fas, .fal {
         color: #f5bc1a;
@@ -48,7 +52,6 @@
       }
       &.active {
         background: #184da3;
-        border-left: 5px solid #27a768;
         padding: 15px 30px 15px 25px;
       }
     }
@@ -56,76 +59,84 @@
 }
 
 header {
-  margin-left: 280px;
+  margin-left: 250px;
   padding: 20px;
   background: white;
-
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
   .search-area {
     display: inline-block;
     width: 50%;
     
     .fas {
       color: $greyDark;
+      margin-right: 20px;
     }
 
     input[type="text"] {
       background: #fff;
-      border: none;
+      border: 1px solid;
+      border-radius: 5px;
       font-size: 1.3rem;
-      color: #27a768;
+      color: black;
       padding: 10px;
       font-weight: 100;
       width: 50%;
       transition: all 0.5s ease-in-out;
     }
   }
-
   .user-area {
-    display: inline-block;
-    float: right;
-
     a {
       color: #1b1b1b;
-      display: inline-block;
-      padding-right: 20px;
+      padding-right: 100px;
       text-decoration: none;
       vertical-align: top;
       height: 30px;
+      font-size: 17px;
+      letter-spacing: 1px;
+      color: black;
+      font-family: 'Roboto', sans-serif;
     }
   }
 }
 
 #content-area {
-  margin-left: 280px;
-  padding: 15px;
+  margin-left: 250px; 
   .greeting-row {
     display: flex;
     justify-content: space-between;
     .greeting {
+      margin-top: 2%;
       margin-left: 10%;
-      margin-top: 5%;
-      color: $greyDark;
-      letter-spacing: 1px;
+      color: #1b1b1b;
+      h1 {
+        letter-spacing: 2px;
+        font-family: 'Roboto', sans-serif;
+      }
+      h2 {
+        padding-top: 15px;
+        font-family: 'Lato', sans-serif;
+      }
     }
     .time-box {
       margin-top: 3%;
       margin-right: 10%;
-      color: rgb(88, 85, 85);
     }
     h3 {
       font-size: 18px;
+      color: $greyDark;
+      font-family: 'Lato', sans-serif;
     }
-  }
-  .work-on-box {
-    margin-left: 10%;
-    color: rgb(88, 85, 85);
   }
 }
 
-.project-status-list {
-  margin-left: 500px;
-  margin-top: 80px;
+.project-status-list { 
+  margin-left: 22%;
+  margin-top: 40px;
   display: flex;
+  justify-content: space-between;
+  max-width: 1600px;
   .not-started {
     color: #de5347;
     .status-content {
@@ -145,24 +156,29 @@ header {
     }
   }
   .project-status-box {
-    margin-right: 80px;
+    margin-right: 90px;
   }
   .status-inner {
-    width: 250px;
+    width: 280px;
     h4 {
-      font-size: 22px;
-      padding-bottom: 10px;
+      font-size: 20px;
+      padding-bottom: 3px;
       font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      color: $purple;
     }
     .status-content {
-      border: solid;
+      border: solid 1px black;
       height: 150px;
       // background-color: white;
       p {
         color: white;
-        font-size: 19px;
+        font-size: 18px;
         text-align: center;
         margin-top: 25px;
+        font-family: 'Lato', sans-serif;
+        padding-left: 5px;
+        padding-right: 5px;
       }
     }
   }

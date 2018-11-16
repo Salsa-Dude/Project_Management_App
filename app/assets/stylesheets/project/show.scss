@@ -7,7 +7,7 @@
   
   .show-project-page {
     font-family: 'Roboto', sans-serif;
-    background: $greyLight;
+    background: $grey;
     #sideMenu {
       background: #518ff5;
       max-width: 280px;
@@ -53,19 +53,84 @@
       }
     }
     .user-project {
-      margin-left: 400px;
+      margin-left: 450px;
       display: flex;
+      justify-content: space-between;
       h1 {
         color: $greyDark;
+        margin-top: 40px;
+        font-size: 48px;
       }
       .description {
         margin-top: 50px;
         h2 {
           color: $orange;
         }
+        .description-content {
+          width: 650px;
+          height: 250px;
+          border: solid;
+          text-indent: 30px;
+          padding-top: 20px;
+          background-color: white;
+        }
       }
-      
+      .project-time {
+        margin-top: 3%;
+        margin-right: 13%;
+        line-height: 2em;
+        text-decoration: none;
+        font-size: 17px;
+      }
+    }
+    .collaborators {
+      margin-top: 70px;
+      .purple-link {
+        color: $purple;
+        text-decoration: none;
+      }
+      h3 {
+        color: $orange;
+      }
+      .c-user {
+        font-size: 20px;
+      }
     }
   }
+
+  .task-note-wrapper {
+    display: flex;
+    justify-content: space-between;
+    .tasks {
+      margin-left: 450px;
+      margin-top: 30px;
+      h3 {
+        
+      }
+      .inner-task {
+        list-style-type: none;
+        .purple-link {
+          color: $purple;
+          text-decoration: none;
+        }
+        li {
+          text-decoration: none;
+          margin-top: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+    .notes {
+      margin-right: 10%;
+      .purple-link {
+        color: $purple;
+        text-decoration: none;
+      }
+    }
+  }
+
+  
+
+  
 
   

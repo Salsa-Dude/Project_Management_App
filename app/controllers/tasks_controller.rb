@@ -18,7 +18,7 @@ class TasksController < ApplicationController
     if @task.valid?
       @task.save
       current_user.user_tasks << @task
-      redirect_to project_task_path(@project.id, @task.id)
+      redirect_to project_path(@project.id)
     else
       render :new
     end
