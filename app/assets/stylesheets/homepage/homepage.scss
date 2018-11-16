@@ -47,9 +47,9 @@
   .category {
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
-    max-width: 1600px;
+   
     margin: 0px auto;
     .box {
       padding-left: 130px;
@@ -79,7 +79,6 @@
   max-width: 1600px;
   .row-inner {
     display: flex;
-    max-width: 1600px;
     margin: 0px auto;
     .row-image-box {
       img {

@@ -70,7 +70,8 @@
       <ul class="inner-task">
         <% @project.tasks.each do |task|%>
        
-          <li><%= link_to task.capitalize_stuff, project_task_path(@project.id, task.id), :class => "purple-link"%></li>
+          <li><%= link_to task.capitalize_stuff, project_task_path(@project.id, task.id), :class => "purple-link"%><a href="<%= edit_project_task_path(@project.id)%>"></i>(Edit Task)</a></li>
+          
           <ul>
           <li>Status: <%= task.status %></li>
           <li>Due Date: <%= task.format_due_date %></li>
@@ -83,7 +84,7 @@
       <ul>
         <% @project.notes.each do |note| %>
           <li><%= note.content %>" ~ posted by: <%= note.user.capitalize_stuff %>
-          <%= link_to "Edit Note", edit_project_note_path(@project.id, note.id),:class => "purple-link" %></li>
+          <%= link_to "(Edit Note)", edit_project_note_path(@project.id, note.id),:class => "purple-link" %></li>
         <% end %>
       </ul>
     </div>

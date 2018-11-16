@@ -1,0 +1,174 @@
+
+
+@import "variables";
+
+* {
+  box-sizing: border-box
+}
+
+header {
+  margin-left: 250px;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  .search-area {
+    display: inline-block;
+    width: 50%;
+    
+    .fas {
+      color: $greyDark;
+      margin-right: 20px;
+    }
+
+    input[type="text"] {
+      background: #fff;
+      border: 1px solid;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      color: black;
+      padding: 10px;
+      font-weight: 100;
+      width: 50%;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  .user-area {
+    a {
+      color: #1b1b1b;
+      padding-right: 100px;
+      text-decoration: none;
+      vertical-align: top;
+      height: 30px;
+      font-size: 17px;
+      letter-spacing: 1px;
+      color: black;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+}
+
+.project-new-body {
+  background: $grey;
+    .form-box {
+      background: white;
+      border: solid 1px;
+      width: 30%;
+      height: 700px;
+      margin-top: 3%;
+      margin-left: 28%;
+      -webkit-box-shadow: 10px 10px 29px -8px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 29px -8px rgba(0,0,0,0.75);
+      box-shadow: 10px 10px 29px -8px rgba(0,0,0,0.75);
+      h1{
+        margin-left: 50px;
+        letter-spacing: 2px;
+        font-family: 'Roboto', sans-serif;
+      }
+      .form-inner {
+        padding: 30px 0px 0px 45px;
+        margin-top: 15px;
+        input {
+          display: block;
+          margin-bottom: 10px;
+          border: 1px solid darkgray;
+          border-radius: 5px;
+          padding: 10px;
+        }
+       
+        input[type="text"], input[type="password"]  {
+          width: 280px;
+          padding-top: 8px;
+          margin-top: 10px;
+        }
+        label {
+          font-size: 20px;
+          font-family: 'Lato', sans-serif;
+          display: block;
+        }
+        label[for=project_description] {
+          margin-bottom: 20px;
+        }
+        label[for=project_due_date] {
+          margin-bottom: 20px;
+        }
+        label[for=project_status] {
+          margin-bottom: 20px;
+        }
+        textarea {
+          margin-bottom: 20px;
+        }
+        #project_description {
+          height: 100px;
+          width: 60%;
+        }
+        .date-format {
+          margin-bottom: 20px;
+        }
+        select {
+          margin-bottom: 20px;
+        }
+        input[type="submit"] {
+          color:white ;
+          background-color:#de5347;
+          font-size: 20px;
+          padding: 10px 20px 10px 20px;
+          border: 1px solid;
+          width: 200px;
+          margin-top: 30px;
+          font-family: 'Montserrat', sans-serif;
+        }
+      }
+  }
+}
+
+#sideMenu {
+  background: #518ff5;
+  max-width: 250px;
+  width: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid;
+  h2 {
+    text-align: center;
+    color: 	#f5bc1a;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Fredoka One', cursive;
+  }
+  nav {
+    padding-top: 80px;
+    a{
+      display: block;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      padding: 28px 30px;
+      font-weight: 300;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+  
+      &:hover {
+        background: #497ddf;
+        // border-left: 5px solid #27a768;
+      }
+      .fas, .fal {
+        color: #f5bc1a;
+        font-size: 1.7rem;
+        margin-right: 0.8rem;
+        display: inline-block;
+        width: 30px;
+        position: relative;
+        top: 2px;
+      }
+      &.active {
+        background: #184da3;
+        padding: 15px 30px 15px 25px;
+      }
+    }
+  }
+}
+
+

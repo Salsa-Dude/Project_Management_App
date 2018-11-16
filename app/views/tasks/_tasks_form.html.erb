@@ -1,18 +1,59 @@
-<%= form_for [@project, @task] do |f|%>
-  <% if @task.errors.any? %>
-   <% @task.errors.full_messages.each do |message| %>
-     <li><%= message %></li>
-   <% end %>
-  <% end %>
-  <%=f.label :name%>:
-  <%=f.text_field :name%>
-  <%=f.label :description%>:
-  <%=f.text_area :description%>
-  <%=f.label :due_date%>:
-  <%=f.date_select :due_date, {order: [:month, :day, :year],
-    prompt: { day: 'Select day', month: 'Select month', year: 'Select year'},
-    start_year: Date.today.year - 20, end_year: Date.today.year + 100}, {required: true}%>
-  <%=f.label :status%>:
-  <%=f.select :status, options_for_select(["Not Started", "In Progress", "Complete"]) %>
-  <%=f.submit submit_text %>
-  <% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Lato:400,700|Montserrat:400,700|Roboto:400,700" rel="stylesheet">
+</head>
+<body class="task-form-body">
+  <section id="sideMenu">
+    <h2>WePlan</h2>
+    <nav>
+      <a href="/projects"><i class="fas fa-paperclip"></i>All Projects</a>
+      <a href="<%= project_path(@project.id)%>"><i class="fas fa-paperclip"></i>Return to Project</a>
+    </nav>
+  </section>
+
+  <header>
+    <div class="search-area">
+      <i class="fas fa-search"></i>
+    <input type="text" name="" value="">
+    </div>
+    <div class="user-area">
+      <%= link_to "Logout", "/logout", method: "DELETE"%>
+      <a href="/root">Home</a>
+    </div>
+  </header>
+
+  
+<div class="form-box">
+<h1>Create Task</h1>
+  <div class="form-inner">
+    <%= form_for [@project, @task] do |f|%>
+      <% if @task.errors.any? %>
+      <% @task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      <% end %>
+      <%=f.label :name%>
+      <%=f.text_field :name%>
+      <%=f.label :description%>
+      <%=f.text_area :description%>
+      <%=f.label :due_date%>
+      <%=f.date_select :due_date, {order: [:month, :day, :year],
+        prompt: { day: 'Select day', month: 'Select month', year: 'Select year'},
+        start_year: Date.today.year - 20, end_year: Date.today.year + 100}, {required: true}%>
+      <%=f.label :status%>
+      <%=f.select :status, options_for_select(["Not Started", "In Progress", "Complete"]) %>
+      <%=f.submit submit_text %>
+    <% end %>
+  </div>
+</div>
+
+</body>
+</html>
+

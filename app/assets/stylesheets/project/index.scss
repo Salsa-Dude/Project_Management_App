@@ -7,26 +7,26 @@
 }
 
 .project-index-body {
-  font-family: 'Roboto', sans-serif;
   background: $grey;
 }
 
 .project-index-body {
   #sideMenu {
     background: #518ff5;
-    max-width: 280px;
-    width: 280px;
+    max-width: 250px;
+    width: 250px;
     position: absolute;
     top: 0;
     bottom: 0;
     h2 {
       text-align: center;
       color: 	#f5bc1a;
-      font-size: 28px;
+      font-size: 30px;
       letter-spacing: 1px;
+      font-family: 'Fredoka One', cursive;
     }
     nav {
-      padding-top: 100px;
+      padding-top: 80px;
       a{
         display: block;
         color: white;
@@ -35,7 +35,9 @@
         font-weight: 300;
         font-size: 16px;
         transition: all 0.3s ease-in-out;
+        font-family: 'Montserrat', sans-serif;
         &:hover {
+          
           // background: #27a768;
           border-left: 5px solid #27a768;
           // padding: 20px 30px 15px 25px;
@@ -58,23 +60,27 @@
     }
   }
   header {
-    margin-left: 280px;
+    margin-left: 250px;
     padding: 20px;
     background: white;
-  
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-around;
     .search-area {
       display: inline-block;
       width: 50%;
       
       .fas {
         color: $greyDark;
+        margin-right: 20px;
       }
   
       input[type="text"] {
         background: #fff;
-        border: none;
+        border: 1px solid;
         font-size: 1.3rem;
-        color: #27a768;
+        border-radius: 5px;
+        color: black;
         padding: 10px;
         font-weight: 100;
         width: 50%;
@@ -83,30 +89,31 @@
     }
   
     .user-area {
-      display: inline-block;
-      float: right;
-  
       a {
         color: #1b1b1b;
-        font-weight: bold;
-        display: inline-block;
-        padding-right: 40px;
+        padding-right: 100px;
         text-decoration: none;
         vertical-align: top;
+        font-size: 17px;
+        letter-spacing: 1px;
         height: 30px;
+        font-family: 'Roboto', sans-serif;
       }
     }
   }
   .project-heading {
-    margin-left: 400px;
+    margin-left: 350px;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 3%;
     color: #1b1b1b;
+    font-family: 'Roboto', sans-serif;
   }
   .user-project-list {
-    margin-left: 400px;
+    margin-left: 360px;
     h2 {
       color: $orange;
+      font-family: 'Lato', sans-serif;
+      margin-top: -10px;
     }
     .project-box {
       display: inline-block;
@@ -119,6 +126,8 @@
         li {
           font-size: 17px;
           line-height: 2em;
+          font-family: 'Lato', sans-serif;
+          list-style-type: none;
           .purple-link {
             color: #673ab7;
           }

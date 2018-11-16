@@ -24,7 +24,6 @@
     letter-spacing: 1px;
     font-family: 'Fredoka One', cursive;
   }
-
   nav {
     padding-top: 80px;
     a{
@@ -64,7 +63,7 @@ header {
   background: white;
   border-bottom: 1px solid;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   .search-area {
     display: inline-block;
     width: 50%;
@@ -105,10 +104,10 @@ header {
   margin-left: 250px; 
   .greeting-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     .greeting {
       margin-top: 2%;
-      margin-left: 10%;
+      margin-left: 5%;
       color: #1b1b1b;
       h1 {
         letter-spacing: 2px;
@@ -121,7 +120,7 @@ header {
     }
     .time-box {
       margin-top: 3%;
-      margin-right: 10%;
+      margin-right: 5%;
     }
     h3 {
       font-size: 18px;
@@ -132,11 +131,10 @@ header {
 }
 
 .project-status-list { 
-  margin-left: 22%;
+  margin-left: 20%;
   margin-top: 40px;
   display: flex;
-  justify-content: space-between;
-  max-width: 1600px;
+  justify-content: space-around;
   .not-started {
     color: #de5347;
     .status-content {

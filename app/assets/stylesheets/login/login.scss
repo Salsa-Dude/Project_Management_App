@@ -1,5 +1,8 @@
 
+@import "variables";
+
 .login-body {
+  background-color: $grey;
   .login-header {
     height: 80px;
     background-color: #518ff5;
@@ -53,13 +56,12 @@
   }
   .login-row {
     display: flex;
-    justify-content: space-between;
-    max-width: 1600px;
+    justify-content: space-around;
     .login-image-box {
       margin-right: 10%;
       padding-top: 40px;
       img {
-        width: 600px;
+        width: 500px;
       }
     }
   }
