@@ -33,7 +33,7 @@ Collaborator.create(user_id: 3, project_id: 1)
 Collaborator.create(user_id: 1, project_id: 3)
 Collaborator.create(user_id: 2, project_id: 2)
 
-task1 = Task.create(name: "write content", description: "Pick from among the many types of cereals out there. Sweet? Healthier? Kid-Cereal? ...Lucky Charms? Cap'n Crunch? Honey Bunches? Rasin Bran? Kix??", due_date: DateTime.new(2018, 12, 25), status: "Not Started", project_id: 3)
+task1 = Task.create(name: "Pick a cereal to eat", description: "Pick from among the many types of cereals out there. Sweet? Healthier? Kid-Cereal? ...Lucky Charms? Cap'n Crunch? Honey Bunches? Rasin Bran? Kix??", due_date: DateTime.new(2018, 12, 25), status: "Not Started", project_id: 3)
 task2 = Task.create(name: "choose a theme", description: "We need to figure out what kind of command line app we want to make. I like soccer. Do you?", due_date: DateTime.new(2018, 11, 13), status: "Not Started", project_id: 1)
 task3 = Task.create(name: "Create the Models", description: "You should have least five models. You do not have to have all of these built out on day one. But by the end of the week, you should have at least five models.", due_date: DateTime.new(2018, 10, 25), status: "Complete", project_id: 2)
 task4 = Task.create(name: "Moqup the layout", description: "Plan out each page. Which colors? Which pages?", due_date: DateTime.new(2018, 11, 14), status: "In Progress", project_id: 2)
