@@ -70,7 +70,7 @@
       <ul class="inner-task">
         <% @project.tasks.each do |task|%>
        
-          <li><%= link_to task.capitalize_stuff, project_task_path(@project.id, task.id), :class => "purple-link"%><a href="<%= edit_project_task_path(@project.id)%>"></i><span>(Edit Task)</span></a></li>
+          <li><%= task.capitalize_stuff %><a href="<%= edit_project_task_path(@project.id)%>"></i><span>(Edit Task)</span></a></li>
           
           <ul>
           <li>Status: <%= task.status %></li>
