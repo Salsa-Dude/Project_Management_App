@@ -1,24 +1,8 @@
-# README
+# WePlan
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+WePlan is a project managment app that allows users to create projects and organize projects into progress statues (not-started, in-progress, complete). Users are also able to create mutiple tasks inside a project and create notes. Users can also add a collaborator user into the project.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Guest Login <br>
+username: jarias3 <br>
+email: joseph@gmail.com <br>
+password: joseph
